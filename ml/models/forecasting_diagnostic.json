@@ -1,0 +1,50 @@
+{
+    "dataset": {
+        "records": 140400,
+        "machines": 975,
+        "unique_timestamps": 144
+    },
+    "global_stability": {
+        "util_CPU": {
+            "mean_utilization": 26.575709565105157,
+            "std_utilization": 10.605431871913911,
+            "mean_absolute_change": 3.4642788350324687,
+            "median_absolute_change": 2.75999965668,
+            "p90_absolute_change": 7.540000152579999,
+            "p95_absolute_change": 9.45999999998,
+            "max_absolute_change": 56.70000076296,
+            "percentage_change_below_1": 23.505827505827508,
+            "percentage_change_below_2": 39.57683342298727,
+            "percentage_change_below_5": 74.8617536309844
+        },
+        "util_memory": {
+            "mean_utilization": 49.061006572061245,
+            "std_utilization": 13.18014839992754,
+            "mean_absolute_change": 3.09247853777656,
+            "median_absolute_change": 2.3200012207,
+            "p90_absolute_change": 7.020001220692002,
+            "p95_absolute_change": 8.879999389620004,
+            "max_absolute_change": 47.24000091552,
+            "percentage_change_below_1": 28.022951407566794,
+            "percentage_change_below_2": 44.884346422807965,
+            "percentage_change_below_5": 79.09557109557109
+        }
+    },
+    "persistence_baseline": {
+        "util_CPU": {
+            "persistence_mae": 3.4642788350324687,
+            "persistence_rmse": 4.609596770035345
+        },
+        "util_memory": {
+            "persistence_mae": 3.09247853777656,
+            "persistence_rmse": 4.282690243066709
+        }
+    },
+    "machine_stability": {
+        "machines": 975,
+        "mean_cpu_change": 3.4642788350324683,
+        "mean_memory_change": 3.09247853777656,
+        "median_cpu_change": 3.6601398541386856,
+        "median_memory_change": 3.3053146842471333
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "model": "Extra Trees",
+    "threshold": 0.3,
+    "test_windows": 37050,
+    "actual_high_windows": 269,
+    "false_negative_windows": 134,
+    "true_positive_windows": 135,
+    "false_negative_machines": 17,
+    "true_positive_machines": 9,
+    "false_negative_average_memory_change": 12.792960242848508,
+    "true_positive_average_memory_change": 3.22888279102563,
+    "false_negative_average_future_memory_peak": 90.66481358542589,
+    "true_positive_average_future_memory_peak": 90.23951848913082,
+    "important_notes": [
+        "Alerts were reconstructed using probability >= 0.30.",
+        "Only historical observations were used for historical transition features.",
+        "Future utilization is used only for retrospective analysis, not as model input.",
+        "Rows represent overlapping prediction windows, not independent incidents.",
+        "These are historical Alibaba Cluster Trace experiments, not live cloud provider measurements."
+    ]
+}

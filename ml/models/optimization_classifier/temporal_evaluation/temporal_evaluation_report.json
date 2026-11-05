@@ -1,0 +1,127 @@
+{
+    "project": "CloudMorph",
+    "evaluation": "Chronological temporal validation",
+    "model": "Extra Trees",
+    "model_version": "1.0.0",
+    "model_configuration": {
+        "n_estimators": 300,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+    },
+    "dataset": {
+        "total_samples": 123825,
+        "training_samples": 70200,
+        "testing_samples": 37050,
+        "purged_samples": 16575,
+        "unique_machines": 975,
+        "feature_count": 55
+    },
+    "temporal_split": {
+        "test_start_history_step": 89.0,
+        "training_first_history_step": 0.0,
+        "training_last_history_step": 71.0,
+        "training_last_target_end_step": 88.0,
+        "testing_first_history_step": 89.0,
+        "testing_last_history_step": 126.0,
+        "testing_first_target_start_step": 101.0,
+        "testing_last_target_end_step": 143.0,
+        "purging_applied": true,
+        "target_history_overlap": false,
+        "same_machines_in_both_periods": true
+    },
+    "training_class_distribution": {
+        "NORMAL_DEMAND": 63907,
+        "LOW_DEMAND": 6100,
+        "HIGH_DEMAND": 193
+    },
+    "testing_class_distribution": {
+        "NORMAL_DEMAND": 28824,
+        "LOW_DEMAND": 7957,
+        "HIGH_DEMAND": 269
+    },
+    "temporal_metrics": {
+        "accuracy": 0.9566801619433198,
+        "balanced_accuracy": 0.6969169606850062,
+        "macro_f1": 0.7257924150893543,
+        "high_demand_recall": 0.18587360594795538
+    },
+    "classification_report": {
+        "LOW_DEMAND": {
+            "precision": 0.8959537572254336,
+            "recall": 0.935025763478698,
+            "f1-score": 0.9150728737470021,
+            "support": 7957.0
+        },
+        "NORMAL_DEMAND": {
+            "precision": 0.9750610394140217,
+            "recall": 0.9698515126283652,
+            "f1-score": 0.9724492990572929,
+            "support": 28824.0
+        },
+        "HIGH_DEMAND": {
+            "precision": 0.6578947368421053,
+            "recall": 0.18587360594795538,
+            "f1-score": 0.2898550724637681,
+            "support": 269.0
+        },
+        "accuracy": 0.9566801619433198,
+        "macro avg": {
+            "precision": 0.8429698444938536,
+            "recall": 0.6969169606850062,
+            "f1-score": 0.7257924150893543,
+            "support": 37050.0
+        },
+        "weighted avg": {
+            "precision": 0.9557688834149275,
+            "recall": 0.9566801619433198,
+            "f1-score": 0.955170970767208,
+            "support": 37050.0
+        }
+    },
+    "confusion_matrix": {
+        "labels": [
+            "LOW_DEMAND",
+            "NORMAL_DEMAND",
+            "HIGH_DEMAND"
+        ],
+        "matrix": [
+            [
+                7440,
+                517,
+                0
+            ],
+            [
+                843,
+                27955,
+                26
+            ],
+            [
+                21,
+                198,
+                50
+            ]
+        ]
+    },
+    "machine_aware_random_test_reference": {
+        "accuracy": 0.9775610950185631,
+        "balanced_accuracy": 0.9308421001968193,
+        "macro_f1": 0.9259909699752115,
+        "high_demand_recall": 0.8648648648648649
+    },
+    "important_notes": [
+        "The production classifier was not modified.",
+        "The temporal model was trained only on earlier windows.",
+        "Training target windows were purged to avoid overlap with test history windows.",
+        "The same machines appear in training and testing.",
+        "This experiment measures future-time generalization on known machines.",
+        "The earlier machine-aware experiment measures generalization to unseen machines.",
+        "The two evaluation results are not directly comparable because their split strategies differ.",
+        "Dataset windows are overlapping sliding windows.",
+        "Workload labels represent derived future utilization conditions, not actual cloud scaling decisions.",
+        "The dataset covers a limited historical trace and does not establish long-term production performance.",
+        "No cloud resources are modified by this evaluation."
+    ]
+}

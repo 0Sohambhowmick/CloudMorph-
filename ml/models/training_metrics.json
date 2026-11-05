@@ -1,0 +1,32 @@
+{
+    "CPU utilization": {
+        "LSTM": {
+            "MAE": 3.080404819727799,
+            "RMSE": 3.9297513421878025
+        },
+        "Persistence baseline": {
+            "MAE": 2.5564205163983584,
+            "RMSE": 3.4302330551933027
+        }
+    },
+    "Memory utilization": {
+        "LSTM": {
+            "MAE": 2.6895085836365364,
+            "RMSE": 3.607759864788867
+        },
+        "Persistence baseline": {
+            "MAE": 2.160574408475656,
+            "RMSE": 3.0568679405799113
+        }
+    },
+    "LSTM_clipped": {
+        "CPU utilization": {
+            "MAE": 3.080404819727799,
+            "RMSE": 3.9297513421878025
+        },
+        "Memory utilization": {
+            "MAE": 2.6895085836365364,
+            "RMSE": 3.607759864788867
+        }
+    }
+}

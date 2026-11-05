@@ -1,0 +1,129 @@
+{
+    "matched_test_windows": 37050,
+    "original_threshold": 0.11,
+    "platt_threshold": 0.01,
+    "original_metrics": {
+        "true_positives": 102,
+        "false_positives": 89,
+        "false_negatives": 167,
+        "true_negatives": 36692,
+        "alerts": 191,
+        "precision": 0.5340314136125655,
+        "recall": 0.379182156133829,
+        "f1": 0.4434782608695652,
+        "specificity": 0.997580272423262
+    },
+    "platt_metrics": {
+        "true_positives": 102,
+        "false_positives": 89,
+        "false_negatives": 167,
+        "true_negatives": 36692,
+        "alerts": 191,
+        "precision": 0.5340314136125655,
+        "recall": 0.379182156133829,
+        "f1": 0.4434782608695652,
+        "specificity": 0.997580272423262
+    },
+    "probability_distributions": [
+        {
+            "group": "Original False Positives",
+            "count": 89,
+            "mean": 0.9855661283146068,
+            "median": 0.9997098,
+            "minimum": 0.33793443,
+            "maximum": 0.99977,
+            "std": 0.0803215224345948,
+            "at_least_50_percent": 88,
+            "at_least_90_percent": 87,
+            "at_least_95_percent": 86,
+            "at_least_99_percent": 80
+        },
+        {
+            "group": "Platt False Positives",
+            "count": 89,
+            "mean": 0.6438008477307938,
+            "median": 0.738177298949144,
+            "minimum": 0.021542154653722223,
+            "maximum": 0.7621682507756573,
+            "std": 0.1892329831386955,
+            "at_least_50_percent": 75,
+            "at_least_90_percent": 0,
+            "at_least_95_percent": 0,
+            "at_least_99_percent": 0
+        },
+        {
+            "group": "Original True Positives",
+            "count": 102,
+            "mean": 0.9373318666666666,
+            "median": 0.999733675,
+            "minimum": 0.18535101,
+            "maximum": 0.99977654,
+            "std": 0.1870994164067854,
+            "at_least_50_percent": 95,
+            "at_least_90_percent": 91,
+            "at_least_95_percent": 89,
+            "at_least_99_percent": 86
+        },
+        {
+            "group": "Platt True Positives",
+            "count": 102,
+            "mean": 0.6306225819580145,
+            "median": 0.7472441682720301,
+            "minimum": 0.01391679625343444,
+            "maximum": 0.7650450334374156,
+            "std": 0.24809066715808784,
+            "at_least_50_percent": 84,
+            "at_least_90_percent": 0,
+            "at_least_95_percent": 0,
+            "at_least_99_percent": 0
+        },
+        {
+            "group": "Original False Negatives",
+            "count": 167,
+            "mean": 0.0019366008651137722,
+            "median": 0.00015065716,
+            "minimum": 2.5449444e-05,
+            "maximum": 0.029733898,
+            "std": 0.004649732517357317,
+            "at_least_50_percent": 0,
+            "at_least_90_percent": 0,
+            "at_least_95_percent": 0,
+            "at_least_99_percent": 0
+        },
+        {
+            "group": "Platt False Negatives",
+            "count": 167,
+            "mean": 0.0006725253119203482,
+            "median": 0.0002511702202560626,
+            "minimum": 9.439818341493753e-05,
+            "maximum": 0.004660434173457742,
+            "std": 0.0008863948564900859,
+            "at_least_50_percent": 0,
+            "at_least_90_percent": 0,
+            "at_least_95_percent": 0,
+            "at_least_99_percent": 0
+        }
+    ],
+    "sequence_analysis": {
+        "original_sequences": 17,
+        "platt_sequences": 17,
+        "original_longest_sequence": 9,
+        "platt_longest_sequence": 9
+    },
+    "alert_agreement": [
+        {
+            "original_alert": false,
+            "platt_alert": false,
+            "windows": 36859,
+            "actual_high_windows": 167,
+            "agreement_group": "NEITHER_ALERT"
+        },
+        {
+            "original_alert": true,
+            "platt_alert": true,
+            "windows": 191,
+            "actual_high_windows": 102,
+            "agreement_group": "BOTH_ALERT"
+        }
+    ]
+}

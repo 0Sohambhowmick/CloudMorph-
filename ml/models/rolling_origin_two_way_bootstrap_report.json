@@ -1,0 +1,137 @@
+{
+    "experiment": "Two-way machine and time block bootstrap",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "baseline": "Persistence",
+    "candidate": "Weighted Moving Average",
+    "resampling": {
+        "machine": "Machines sampled with replacement",
+        "time": "Circular moving block bootstrap",
+        "time_block_length": 6,
+        "bootstrap_iterations": 2000,
+        "random_state": 42,
+        "confidence_level": 0.95
+    },
+    "results": [
+        {
+            "machines": 975,
+            "forecast_origins": 72,
+            "bootstrap_iterations": 2000,
+            "time_block_length": 6,
+            "persistence_MAE": 4.106584515416337,
+            "weighted_MAE": 4.027456002659851,
+            "MAE_difference_weighted_minus_persistence": -0.07912851275648602,
+            "MAE_difference_95CI": {
+                "lower": -0.3426915146298048,
+                "upper": 0.1539804717489859
+            },
+            "persistence_RMSE": 5.7397739786302555,
+            "weighted_RMSE": 5.539722988974283,
+            "RMSE_difference_weighted_minus_persistence": -0.20005098965597234,
+            "RMSE_difference_95CI": {
+                "lower": -0.5544444004341942,
+                "upper": 0.10705033698605877
+            },
+            "relative_MAE_improvement_percent": 1.9268692135625938,
+            "relative_MAE_improvement_95CI": {
+                "lower": -4.002126995692722,
+                "upper": 7.884391541924879
+            },
+            "bootstrap_probability_weighted_MAE_better": 0.7165,
+            "MAE_interpretation": "The MAE confidence interval includes zero. The difference is not clearly distinguishable from zero.",
+            "RMSE_interpretation": "The RMSE confidence interval includes zero.",
+            "horizon": "15min",
+            "target": "CPU"
+        },
+        {
+            "machines": 975,
+            "forecast_origins": 72,
+            "bootstrap_iterations": 2000,
+            "time_block_length": 6,
+            "persistence_MAE": 4.396438605329314,
+            "weighted_MAE": 4.261525188626934,
+            "MAE_difference_weighted_minus_persistence": -0.13491341670237933,
+            "MAE_difference_95CI": {
+                "lower": -0.39045986390520493,
+                "upper": 0.10520246573542467
+            },
+            "persistence_RMSE": 6.0044094223187505,
+            "weighted_RMSE": 5.848558199157398,
+            "RMSE_difference_weighted_minus_persistence": -0.1558512231613527,
+            "RMSE_difference_95CI": {
+                "lower": -0.4727900934672999,
+                "upper": 0.10941891625255237
+            },
+            "relative_MAE_improvement_percent": 3.0686978441786676,
+            "relative_MAE_improvement_95CI": {
+                "lower": -2.238097731798135,
+                "upper": 9.151851530383833
+            },
+            "bootstrap_probability_weighted_MAE_better": 0.8515,
+            "MAE_interpretation": "The MAE confidence interval includes zero. The difference is not clearly distinguishable from zero.",
+            "RMSE_interpretation": "The RMSE confidence interval includes zero.",
+            "horizon": "15min",
+            "target": "Memory"
+        },
+        {
+            "machines": 975,
+            "forecast_origins": 72,
+            "bootstrap_iterations": 2000,
+            "time_block_length": 6,
+            "persistence_MAE": 5.285156620453893,
+            "weighted_MAE": 5.067351643014528,
+            "MAE_difference_weighted_minus_persistence": -0.2178049774393651,
+            "MAE_difference_95CI": {
+                "lower": -0.4562512812500691,
+                "upper": 0.014478563403389016
+            },
+            "persistence_RMSE": 7.257689345925503,
+            "weighted_RMSE": 6.899346136310522,
+            "RMSE_difference_weighted_minus_persistence": -0.358343209614981,
+            "RMSE_difference_95CI": {
+                "lower": -0.6802923451796079,
+                "upper": -0.09397691989771882
+            },
+            "relative_MAE_improvement_percent": 4.121069498611374,
+            "relative_MAE_improvement_95CI": {
+                "lower": -0.2639001748767708,
+                "upper": 8.634488618429843
+            },
+            "bootstrap_probability_weighted_MAE_better": 0.966,
+            "MAE_interpretation": "The MAE confidence interval includes zero. The difference is not clearly distinguishable from zero.",
+            "RMSE_interpretation": "Weighted Moving Average has a lower RMSE with a 95% confidence interval below zero.",
+            "horizon": "30min",
+            "target": "CPU"
+        },
+        {
+            "machines": 975,
+            "forecast_origins": 72,
+            "bootstrap_iterations": 2000,
+            "time_block_length": 6,
+            "persistence_MAE": 5.270154317386294,
+            "weighted_MAE": 5.092257690114742,
+            "MAE_difference_weighted_minus_persistence": -0.17789662727155164,
+            "MAE_difference_95CI": {
+                "lower": -0.4469774018181398,
+                "upper": 0.06647907032904217
+            },
+            "persistence_RMSE": 7.369359140071535,
+            "weighted_RMSE": 7.13976985905595,
+            "RMSE_difference_weighted_minus_persistence": -0.22958928101558485,
+            "RMSE_difference_95CI": {
+                "lower": -0.5086716157195371,
+                "upper": -0.026127965825099516
+            },
+            "relative_MAE_improvement_percent": 3.375548732694009,
+            "relative_MAE_improvement_95CI": {
+                "lower": -1.0993508161879253,
+                "upper": 9.192698627533787
+            },
+            "bootstrap_probability_weighted_MAE_better": 0.9185,
+            "MAE_interpretation": "The MAE confidence interval includes zero. The difference is not clearly distinguishable from zero.",
+            "RMSE_interpretation": "Weighted Moving Average has a lower RMSE with a 95% confidence interval below zero.",
+            "horizon": "30min",
+            "target": "Memory"
+        }
+    ],
+    "important_note": "This bootstrap accounts for machine and local time dependence under the selected block length. It does not remove model-selection bias from prior experiments, and results may be sensitive to block length."
+}

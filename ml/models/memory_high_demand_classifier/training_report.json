@@ -1,0 +1,69 @@
+{
+    "project": "CloudMorph",
+    "task": "Future high memory demand classification",
+    "model_name": "ExtraTreesClassifier",
+    "model_version": "1.0.0",
+    "target": {
+        "column": "future_high_memory",
+        "definition": "Future peak memory >=85% over the next 6 observations.",
+        "positive_class": 1,
+        "negative_class": 0
+    },
+    "data": {
+        "total_samples": 123825,
+        "total_machines": 975,
+        "feature_count": 55,
+        "training_samples": 74295,
+        "validation_samples": 24765,
+        "test_samples": 24765,
+        "training_positive_samples": 284,
+        "validation_positive_samples": 83,
+        "test_positive_samples": 140,
+        "training_machines": 585,
+        "validation_machines": 195,
+        "test_machines": 195
+    },
+    "methodology": {
+        "split": "GroupShuffleSplit by machineID",
+        "split_proportions": {
+            "training": 0.6,
+            "validation": 0.2,
+            "testing": 0.2
+        },
+        "model_selection": "Highest validation Average Precision.",
+        "threshold_selection": "Maximum validation F1.",
+        "class_imbalance_handling": "Class weighting.",
+        "automatic_resource_changes": false
+    },
+    "selected_threshold": 0.40302382398153497,
+    "validation_metrics": {
+        "threshold": 0.40302382398153497,
+        "accuracy": 0.9983444377145164,
+        "precision": 0.6779661016949152,
+        "recall": 0.963855421686747,
+        "f1": 0.7960199004975125,
+        "specificity": 0.9984604164978527,
+        "true_positives": 80,
+        "false_positives": 38,
+        "false_negatives": 3,
+        "true_negatives": 24644,
+        "predicted_alerts": 118,
+        "actual_high_demand": 83
+    },
+    "test_metrics": {
+        "threshold": 0.40302382398153497,
+        "accuracy": 0.9970119119725419,
+        "precision": 0.722972972972973,
+        "recall": 0.7642857142857142,
+        "f1": 0.7430555555555556,
+        "specificity": 0.9983350253807106,
+        "true_positives": 107,
+        "false_positives": 41,
+        "false_negatives": 33,
+        "true_negatives": 24584,
+        "predicted_alerts": 148,
+        "actual_high_demand": 140,
+        "average_precision": 0.7590589645568576,
+        "roc_auc": 0.9458097171863669
+    }
+}

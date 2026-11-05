@@ -1,0 +1,24 @@
+{
+    "original_lstm": {
+        "false_positive_windows": 89,
+        "unique_machines": 13,
+        "mean_probability": 0.9855661283146068,
+        "median_probability": 0.9997098,
+        "minimum_probability": 0.33793443,
+        "maximum_probability": 0.99977,
+        "probability_at_least_90_percent": 87,
+        "probability_at_least_95_percent": 86,
+        "probability_at_least_99_percent": 80
+    },
+    "moderate_lstm": {
+        "false_positive_windows": 103,
+        "unique_machines": 13,
+        "mean_probability": 0.4398301783106796,
+        "median_probability": 0.50873494,
+        "minimum_probability": 0.031014102,
+        "maximum_probability": 0.6596027,
+        "probability_at_least_90_percent": 0,
+        "probability_at_least_95_percent": 0,
+        "probability_at_least_99_percent": 0
+    }
+}

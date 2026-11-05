@@ -1,0 +1,339 @@
+{
+    "experiment": "Rolling-Origin Backtesting",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "observation_interval_minutes": 5,
+    "forecast_origins": {
+        "first": 60,
+        "last": 131,
+        "total": 72
+    },
+    "folds": {
+        "Period_1": {
+            "start_origin": 60,
+            "end_origin": 77
+        },
+        "Period_2": {
+            "start_origin": 78,
+            "end_origin": 95
+        },
+        "Period_3": {
+            "start_origin": 96,
+            "end_origin": 113
+        },
+        "Period_4": {
+            "start_origin": 114,
+            "end_origin": 131
+        }
+    },
+    "horizons": {
+        "15min": 3,
+        "30min": 6
+    },
+    "methods": [
+        "Persistence",
+        "Weighted Moving Average"
+    ],
+    "overall_metrics": [
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "Persistence",
+            "samples": 70200,
+            "MAE": 4.106584515416336,
+            "RMSE": 5.739773978630256
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "Weighted Moving Average",
+            "samples": 70200,
+            "MAE": 4.027456002659851,
+            "RMSE": 5.539722988974283
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "Persistence",
+            "samples": 70200,
+            "MAE": 4.396438605329314,
+            "RMSE": 6.0044094223187505
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "Weighted Moving Average",
+            "samples": 70200,
+            "MAE": 4.261525188626934,
+            "RMSE": 5.848558199157399
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "Persistence",
+            "samples": 70200,
+            "MAE": 5.285156620453893,
+            "RMSE": 7.2576893459255025
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "Weighted Moving Average",
+            "samples": 70200,
+            "MAE": 5.067351643014527,
+            "RMSE": 6.899346136310522
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "Persistence",
+            "samples": 70200,
+            "MAE": 5.270154317386294,
+            "RMSE": 7.369359140071535
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "Weighted Moving Average",
+            "samples": 70200,
+            "MAE": 5.092257690114742,
+            "RMSE": 7.139769859055951
+        }
+    ],
+    "fold_comparison": [
+        {
+            "fold": "Period_1",
+            "horizon": "15min",
+            "target": "CPU",
+            "MAE_Persistence": 5.412150044797629,
+            "MAE_Weighted_Moving_Average": 4.790639362328443,
+            "RMSE_Persistence": 7.1823284702733545,
+            "RMSE_Weighted_Moving_Average": 6.309981351159378,
+            "MAE_difference": -0.6215106824691858,
+            "RMSE_difference": -0.8723471191139769,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_1",
+            "horizon": "15min",
+            "target": "Memory",
+            "MAE_Persistence": 6.007109120232433,
+            "MAE_Weighted_Moving_Average": 5.642788457868837,
+            "RMSE_Persistence": 7.918874861875374,
+            "RMSE_Weighted_Moving_Average": 7.511766891658346,
+            "MAE_difference": -0.3643206623635953,
+            "RMSE_difference": -0.4071079702170284,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_1",
+            "horizon": "30min",
+            "target": "CPU",
+            "MAE_Persistence": 5.737066949328725,
+            "MAE_Weighted_Moving_Average": 5.135695805154597,
+            "RMSE_Persistence": 7.658602597976363,
+            "RMSE_Weighted_Moving_Average": 6.684522558764415,
+            "MAE_difference": -0.6013711441741281,
+            "RMSE_difference": -0.9740800392119482,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_1",
+            "horizon": "30min",
+            "target": "Memory",
+            "MAE_Persistence": 7.070151176921909,
+            "MAE_Weighted_Moving_Average": 6.782380189109525,
+            "RMSE_Persistence": 9.479938469921628,
+            "RMSE_Weighted_Moving_Average": 9.16725339903324,
+            "MAE_difference": -0.28777098781238397,
+            "RMSE_difference": -0.3126850708883868,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_2",
+            "horizon": "15min",
+            "target": "CPU",
+            "MAE_Persistence": 2.758415947663733,
+            "MAE_Weighted_Moving_Average": 3.0203049318590462,
+            "RMSE_Persistence": 3.748165375003279,
+            "RMSE_Weighted_Moving_Average": 4.078990182026621,
+            "MAE_difference": 0.26188898419531315,
+            "RMSE_difference": 0.3308248070233417,
+            "MAE_winner": "Persistence",
+            "RMSE_winner": "Persistence"
+        },
+        {
+            "fold": "Period_2",
+            "horizon": "15min",
+            "target": "Memory",
+            "MAE_Persistence": 3.67978974719997,
+            "MAE_Weighted_Moving_Average": 3.75507507335068,
+            "RMSE_Persistence": 4.812455829032957,
+            "RMSE_Weighted_Moving_Average": 4.932765744325277,
+            "MAE_difference": 0.07528532615071004,
+            "RMSE_difference": 0.12030991529231994,
+            "MAE_winner": "Persistence",
+            "RMSE_winner": "Persistence"
+        },
+        {
+            "fold": "Period_2",
+            "horizon": "30min",
+            "target": "CPU",
+            "MAE_Persistence": 2.6535113944449793,
+            "MAE_Weighted_Moving_Average": 2.6800558380845105,
+            "RMSE_Persistence": 3.518466783830639,
+            "RMSE_Weighted_Moving_Average": 3.3830807461290617,
+            "MAE_difference": 0.026544443639531234,
+            "RMSE_difference": -0.13538603770157742,
+            "MAE_winner": "Persistence",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_2",
+            "horizon": "30min",
+            "target": "Memory",
+            "MAE_Persistence": 4.008019091826253,
+            "MAE_Weighted_Moving_Average": 3.648064633745287,
+            "RMSE_Persistence": 5.235051045065334,
+            "RMSE_Weighted_Moving_Average": 4.699952508461835,
+            "MAE_difference": -0.35995445808096616,
+            "RMSE_difference": -0.535098536603499,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_3",
+            "horizon": "15min",
+            "target": "CPU",
+            "MAE_Persistence": 4.177724497189413,
+            "MAE_Weighted_Moving_Average": 4.152163908465471,
+            "RMSE_Persistence": 6.308418369009483,
+            "RMSE_Weighted_Moving_Average": 6.1349524671916935,
+            "MAE_difference": -0.025560588723942068,
+            "RMSE_difference": -0.17346590181778954,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_3",
+            "horizon": "15min",
+            "target": "Memory",
+            "MAE_Persistence": 4.00583560809365,
+            "MAE_Weighted_Moving_Average": 3.8692634377592587,
+            "RMSE_Persistence": 5.816982644771505,
+            "RMSE_Weighted_Moving_Average": 5.606858309682259,
+            "MAE_difference": -0.13657217033439162,
+            "RMSE_difference": -0.21012433508924566,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_3",
+            "horizon": "30min",
+            "target": "CPU",
+            "MAE_Persistence": 6.376775207074369,
+            "MAE_Weighted_Moving_Average": 6.0007764412875355,
+            "RMSE_Persistence": 8.58923115785182,
+            "RMSE_Weighted_Moving_Average": 8.267509727388244,
+            "MAE_difference": -0.3759987657868331,
+            "RMSE_difference": -0.32172143046357604,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_3",
+            "horizon": "30min",
+            "target": "Memory",
+            "MAE_Persistence": 4.640756401159785,
+            "MAE_Weighted_Moving_Average": 4.582027723099456,
+            "RMSE_Persistence": 6.957772670397634,
+            "RMSE_Weighted_Moving_Average": 6.949235708925475,
+            "MAE_difference": -0.05872867806032911,
+            "RMSE_difference": -0.0085369614721591,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        },
+        {
+            "fold": "Period_4",
+            "horizon": "15min",
+            "target": "CPU",
+            "MAE_Persistence": 4.078047572014572,
+            "MAE_Weighted_Moving_Average": 4.146715807986443,
+            "RMSE_Persistence": 5.1331562465324465,
+            "RMSE_Weighted_Moving_Average": 5.353732888978544,
+            "MAE_difference": 0.06866823597187022,
+            "RMSE_difference": 0.22057664244609754,
+            "MAE_winner": "Persistence",
+            "RMSE_winner": "Persistence"
+        },
+        {
+            "fold": "Period_4",
+            "horizon": "15min",
+            "target": "Memory",
+            "MAE_Persistence": 3.8930199457912016,
+            "MAE_Weighted_Moving_Average": 3.7789737855289594,
+            "RMSE_Persistence": 4.950366932795271,
+            "RMSE_Weighted_Moving_Average": 4.962544932579302,
+            "MAE_difference": -0.11404616026224224,
+            "RMSE_difference": 0.012177999784031002,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Persistence"
+        },
+        {
+            "fold": "Period_4",
+            "horizon": "30min",
+            "target": "CPU",
+            "MAE_Persistence": 6.373272930967501,
+            "MAE_Weighted_Moving_Average": 6.452878487531469,
+            "RMSE_Persistence": 8.117113059590823,
+            "RMSE_Weighted_Moving_Average": 8.119366611292593,
+            "MAE_difference": 0.07960555656396728,
+            "RMSE_difference": 0.0022535517017701068,
+            "MAE_winner": "Persistence",
+            "RMSE_winner": "Persistence"
+        },
+        {
+            "fold": "Period_4",
+            "horizon": "30min",
+            "target": "Memory",
+            "MAE_Persistence": 5.361690599637227,
+            "MAE_Weighted_Moving_Average": 5.356558214504703,
+            "RMSE_Persistence": 7.179430560326605,
+            "RMSE_Weighted_Moving_Average": 7.0345781081062135,
+            "MAE_difference": -0.005132385132524675,
+            "RMSE_difference": -0.14485245222039111,
+            "MAE_winner": "Weighted Moving Average",
+            "RMSE_winner": "Weighted Moving Average"
+        }
+    ],
+    "mae_win_summary": [
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "Persistence": 2,
+            "Weighted Moving Average": 2
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "Persistence": 1,
+            "Weighted Moving Average": 3
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "Persistence": 2,
+            "Weighted Moving Average": 2
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "Persistence": 0,
+            "Weighted Moving Average": 4
+        }
+    ],
+    "note": "Forecast origins overlap in time. Results across origins are not statistically independent. This is a temporal robustness comparison, not a new untouched confirmatory test."
+}

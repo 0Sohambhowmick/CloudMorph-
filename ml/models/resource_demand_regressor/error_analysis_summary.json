@@ -1,0 +1,258 @@
+{
+    "project": "CloudMorph",
+    "task": "Resource demand regression error analysis",
+    "test_samples": 24765,
+    "unique_test_machines": 195,
+    "cpu": {
+        "samples": 24765,
+        "overall_mae": 2.217629801414197,
+        "overall_rmse": 3.329352833900568,
+        "mean_signed_error": -0.060605567366834666,
+        "errors_above_5_points": 2363,
+        "errors_above_10_points": 186,
+        "percentage_errors_above_5_points": 9.541691903896627,
+        "percentage_errors_above_10_points": 0.7510599636583889,
+        "range_analysis": [
+            {
+                "workload_range": "LOW",
+                "actual_min": 0,
+                "actual_max_exclusive": 35,
+                "samples": 15561,
+                "mae": 1.925130853090857,
+                "rmse": 2.7563443404349446,
+                "mean_signed_error": 0.7944877739513134,
+                "errors_above_5_points": 1133,
+                "errors_above_10_points": 78
+            },
+            {
+                "workload_range": "NORMAL",
+                "actual_min": 35,
+                "actual_max_exclusive": 70,
+                "samples": 9160,
+                "mae": 2.6209890235829647,
+                "rmse": 3.600359227101369,
+                "mean_signed_error": -1.4109025711474374,
+                "errors_above_5_points": 1194,
+                "errors_above_10_points": 83
+            },
+            {
+                "workload_range": "ELEVATED",
+                "actual_min": 70,
+                "actual_max_exclusive": 85,
+                "samples": 44,
+                "mae": 21.69048570581357,
+                "rmse": 29.21274366985258,
+                "mean_signed_error": -21.364853967852802,
+                "errors_above_5_points": 36,
+                "errors_above_10_points": 25
+            }
+        ],
+        "worst_10_machines": [
+            {
+                "machineID": 730,
+                "samples": 127,
+                "mae": 5.492210630328269,
+                "max_error": 32.16485265522989,
+                "mean_signed_error": -2.5496125050988048
+            },
+            {
+                "machineID": 995,
+                "samples": 127,
+                "mae": 5.307289765173673,
+                "max_error": 54.349876780057855,
+                "mean_signed_error": -2.0854863428447565
+            },
+            {
+                "machineID": 341,
+                "samples": 127,
+                "mae": 5.099590403970916,
+                "max_error": 44.34943238606742,
+                "mean_signed_error": -3.1595650299565503
+            },
+            {
+                "machineID": 568,
+                "samples": 127,
+                "mae": 4.631083935133918,
+                "max_error": 13.8254507827777,
+                "mean_signed_error": -2.152991484912807
+            },
+            {
+                "machineID": 436,
+                "samples": 127,
+                "mae": 4.3208817477360215,
+                "max_error": 64.69695033026258,
+                "mean_signed_error": -1.513122430998204
+            },
+            {
+                "machineID": 449,
+                "samples": 127,
+                "mae": 3.704359361358629,
+                "max_error": 55.936900276350485,
+                "mean_signed_error": -1.2670623791438436
+            },
+            {
+                "machineID": 166,
+                "samples": 127,
+                "mae": 3.450333730277133,
+                "max_error": 10.662999738072557,
+                "mean_signed_error": -0.8108159494529711
+            },
+            {
+                "machineID": 899,
+                "samples": 127,
+                "mae": 3.2505902326537406,
+                "max_error": 13.213550075755819,
+                "mean_signed_error": -0.5100880949054373
+            },
+            {
+                "machineID": 794,
+                "samples": 127,
+                "mae": 3.24094833604365,
+                "max_error": 25.848666679223825,
+                "mean_signed_error": -1.5071865386381857
+            },
+            {
+                "machineID": 808,
+                "samples": 127,
+                "mae": 3.201831965915839,
+                "max_error": 12.601734255921091,
+                "mean_signed_error": -0.8317126645333789
+            }
+        ]
+    },
+    "memory": {
+        "samples": 24765,
+        "overall_mae": 2.331789580606482,
+        "overall_rmse": 3.490123223095811,
+        "mean_signed_error": 0.04682602168352005,
+        "errors_above_5_points": 2691,
+        "errors_above_10_points": 229,
+        "percentage_errors_above_5_points": 10.866141732283465,
+        "percentage_errors_above_10_points": 0.924692105794468,
+        "range_analysis": [
+            {
+                "workload_range": "LOW",
+                "actual_min": 0,
+                "actual_max_exclusive": 35,
+                "samples": 3629,
+                "mae": 1.3177561314531907,
+                "rmse": 2.1918431952635933,
+                "mean_signed_error": 0.8713754799640844,
+                "errors_above_5_points": 131,
+                "errors_above_10_points": 15
+            },
+            {
+                "workload_range": "NORMAL",
+                "actual_min": 35,
+                "actual_max_exclusive": 70,
+                "samples": 19156,
+                "mae": 2.324594233299803,
+                "rmse": 3.1291610959234655,
+                "mean_signed_error": 0.28627178846073364,
+                "errors_above_5_points": 1960,
+                "errors_above_10_points": 147
+            },
+            {
+                "workload_range": "ELEVATED",
+                "actual_min": 70,
+                "actual_max_exclusive": 85,
+                "samples": 1840,
+                "mae": 3.643722379647745,
+                "rmse": 4.5315303466159875,
+                "mean_signed_error": -3.1443759191689225,
+                "errors_above_5_points": 520,
+                "errors_above_10_points": 36
+            },
+            {
+                "workload_range": "HIGH",
+                "actual_min": 85,
+                "actual_max_exclusive": 101,
+                "samples": 140,
+                "mae": 12.358968935950115,
+                "rmse": 20.506848531847755,
+                "mean_signed_error": -12.148184844859179,
+                "errors_above_5_points": 80,
+                "errors_above_10_points": 31
+            }
+        ],
+        "worst_10_machines": [
+            {
+                "machineID": 995,
+                "samples": 127,
+                "mae": 5.66477244861019,
+                "max_error": 46.582617030464434,
+                "mean_signed_error": -2.1848204099913677
+            },
+            {
+                "machineID": 436,
+                "samples": 127,
+                "mae": 5.024414232521686,
+                "max_error": 57.11110119795838,
+                "mean_signed_error": -1.2535827460940627
+            },
+            {
+                "machineID": 341,
+                "samples": 127,
+                "mae": 5.006982306776237,
+                "max_error": 34.000300989801595,
+                "mean_signed_error": -1.9790433989206435
+            },
+            {
+                "machineID": 730,
+                "samples": 127,
+                "mae": 4.898042689701839,
+                "max_error": 41.644449483860456,
+                "mean_signed_error": -0.8881194506363522
+            },
+            {
+                "machineID": 449,
+                "samples": 127,
+                "mae": 4.571700618798331,
+                "max_error": 53.06598259384057,
+                "mean_signed_error": -1.1665528020493259
+            },
+            {
+                "machineID": 343,
+                "samples": 127,
+                "mae": 3.8671635013092853,
+                "max_error": 16.07614136441225,
+                "mean_signed_error": -0.7464856682241788
+            },
+            {
+                "machineID": 577,
+                "samples": 127,
+                "mae": 3.837101105752857,
+                "max_error": 14.372699778553248,
+                "mean_signed_error": -1.9443888951307875
+            },
+            {
+                "machineID": 679,
+                "samples": 127,
+                "mae": 3.720201505786768,
+                "max_error": 8.200199766155777,
+                "mean_signed_error": -1.9196320388032044
+            },
+            {
+                "machineID": 200,
+                "samples": 127,
+                "mae": 3.6704732324037113,
+                "max_error": 10.854783143668982,
+                "mean_signed_error": -0.3182135603893474
+            },
+            {
+                "machineID": 52,
+                "samples": 127,
+                "mae": 3.5281340519056053,
+                "max_error": 13.284862181977338,
+                "mean_signed_error": 0.25278301111052326
+            }
+        ]
+    },
+    "notes": [
+        "Analysis uses saved unseen-machine test predictions.",
+        "Workload ranges are based on actual future peak utilization.",
+        "Positive signed error means overprediction.",
+        "Negative signed error means underprediction.",
+        "This analysis does not establish safe resizing outcomes."
+    ]
+}

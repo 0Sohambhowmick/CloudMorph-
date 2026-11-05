@@ -1,0 +1,373 @@
+{
+    "experiment": "CloudMorph Forecasting Benchmark V1",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "input_window": 12,
+    "forecast_horizons_minutes": [
+        15,
+        30
+    ],
+    "training_samples": 80925,
+    "validation_samples": 18525,
+    "test_samples": 18525,
+    "random_forest_config": {
+        "n_estimators": 100,
+        "max_depth": 14,
+        "min_samples_leaf": 5,
+        "max_features": 0.8,
+        "random_state": 42
+    },
+    "results": {
+        "15min": {
+            "validation": {
+                "Persistence": {
+                    "CPU utilization": {
+                        "MAE": 4.25168514251709,
+                        "RMSE": 6.299463691287661,
+                        "Clipped MAE": 4.25168514251709,
+                        "Clipped RMSE": 6.299463691287661
+                    },
+                    "Memory utilization": {
+                        "MAE": 3.9784555435180664,
+                        "RMSE": 5.767292722260444,
+                        "Clipped MAE": 3.9784555435180664,
+                        "Clipped RMSE": 5.767292722260444
+                    }
+                },
+                "Moving Average": {
+                    "CPU utilization": {
+                        "MAE": 4.953086853027344,
+                        "RMSE": 6.814182178799532,
+                        "Clipped MAE": 4.953086853027344,
+                        "Clipped RMSE": 6.814182178799532
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.089675426483154,
+                        "RMSE": 5.973735225361483,
+                        "Clipped MAE": 4.089675426483154,
+                        "Clipped RMSE": 5.973735225361483
+                    }
+                },
+                "Linear Trend": {
+                    "CPU utilization": {
+                        "MAE": 5.371024131774902,
+                        "RMSE": 7.651555081551438,
+                        "Clipped MAE": 5.338825225830078,
+                        "Clipped RMSE": 7.5056520146025045
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.98744535446167,
+                        "RMSE": 7.2732324294734685,
+                        "Clipped MAE": 4.912714004516602,
+                        "Clipped RMSE": 6.884270261434446
+                    }
+                },
+                "Linear Regression": {
+                    "CPU utilization": {
+                        "MAE": 5.175882339477539,
+                        "RMSE": 6.879973953109051,
+                        "Clipped MAE": 5.175858497619629,
+                        "Clipped RMSE": 6.879972012485089
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.9204912185668945,
+                        "RMSE": 6.701116087460876,
+                        "Clipped MAE": 4.9204912185668945,
+                        "Clipped RMSE": 6.701116087460876
+                    }
+                },
+                "Random Forest": {
+                    "CPU utilization": {
+                        "MAE": 5.384011805560846,
+                        "RMSE": 7.052781568790309,
+                        "Clipped MAE": 5.384011805560846,
+                        "Clipped RMSE": 7.052781568790309
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.994248031529108,
+                        "RMSE": 6.925275456482485,
+                        "Clipped MAE": 4.994248031529108,
+                        "Clipped RMSE": 6.925275456482485
+                    }
+                }
+            },
+            "test": {
+                "Persistence": {
+                    "CPU utilization": {
+                        "MAE": 3.825366973876953,
+                        "RMSE": 4.98205397566167,
+                        "Clipped MAE": 3.825366973876953,
+                        "Clipped RMSE": 4.98205397566167
+                    },
+                    "Memory utilization": {
+                        "MAE": 3.6179251670837402,
+                        "RMSE": 4.810687826231317,
+                        "Clipped MAE": 3.6179251670837402,
+                        "Clipped RMSE": 4.810687826231317
+                    }
+                },
+                "Moving Average": {
+                    "CPU utilization": {
+                        "MAE": 5.809169292449951,
+                        "RMSE": 7.103373851520339,
+                        "Clipped MAE": 5.809169292449951,
+                        "Clipped RMSE": 7.103373851520339
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.704360008239746,
+                        "RMSE": 6.090673677613008,
+                        "Clipped MAE": 4.704360008239746,
+                        "Clipped RMSE": 6.090673677613008
+                    }
+                },
+                "Linear Trend": {
+                    "CPU utilization": {
+                        "MAE": 4.952959060668945,
+                        "RMSE": 6.141655522426534,
+                        "Clipped MAE": 4.854241371154785,
+                        "Clipped RMSE": 6.015235947748025
+                    },
+                    "Memory utilization": {
+                        "MAE": 5.048912048339844,
+                        "RMSE": 6.47774304351015,
+                        "Clipped MAE": 5.045868873596191,
+                        "Clipped RMSE": 6.463423300332212
+                    }
+                },
+                "Linear Regression": {
+                    "CPU utilization": {
+                        "MAE": 5.006857395172119,
+                        "RMSE": 6.239392548851379,
+                        "Clipped MAE": 5.006825923919678,
+                        "Clipped RMSE": 6.239389186209832
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.405048847198486,
+                        "RMSE": 5.439469780887874,
+                        "Clipped MAE": 4.405048847198486,
+                        "Clipped RMSE": 5.439469780887874
+                    }
+                },
+                "Random Forest": {
+                    "CPU utilization": {
+                        "MAE": 5.009207207208495,
+                        "RMSE": 6.29793463250593,
+                        "Clipped MAE": 5.009207207208495,
+                        "Clipped RMSE": 6.29793463250593
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.342958932826845,
+                        "RMSE": 5.791329250696148,
+                        "Clipped MAE": 4.342958932826845,
+                        "Clipped RMSE": 5.791329250696148
+                    }
+                },
+                "LSTM V3": {
+                    "CPU utilization": {
+                        "LSTM": {
+                            "MAE": 5.9189576645007485,
+                            "RMSE": 6.970881436295811
+                        },
+                        "LSTM clipped": {
+                            "MAE": 5.9189576645007485,
+                            "RMSE": 6.970881436295811
+                        },
+                        "Persistence baseline": {
+                            "MAE": 3.825366802300988,
+                            "RMSE": 4.982053972396649
+                        }
+                    },
+                    "Memory utilization": {
+                        "LSTM": {
+                            "MAE": 5.113900066623823,
+                            "RMSE": 6.348806398380681
+                        },
+                        "LSTM clipped": {
+                            "MAE": 5.113900066623823,
+                            "RMSE": 6.348806398380681
+                        },
+                        "Persistence baseline": {
+                            "MAE": 3.617925275223864,
+                            "RMSE": 4.810687901081666
+                        }
+                    }
+                }
+            }
+        },
+        "30min": {
+            "validation": {
+                "Persistence": {
+                    "CPU utilization": {
+                        "MAE": 5.877005100250244,
+                        "RMSE": 8.084608416584672,
+                        "Clipped MAE": 5.877005100250244,
+                        "Clipped RMSE": 8.084608416584672
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.461427211761475,
+                        "RMSE": 6.781997569140823,
+                        "Clipped MAE": 4.461427211761475,
+                        "Clipped RMSE": 6.781997569140823
+                    }
+                },
+                "Moving Average": {
+                    "CPU utilization": {
+                        "MAE": 5.641845226287842,
+                        "RMSE": 7.727567879246946,
+                        "Clipped MAE": 5.641845226287842,
+                        "Clipped RMSE": 7.727567879246946
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.891302585601807,
+                        "RMSE": 7.1496743721605736,
+                        "Clipped MAE": 4.891302585601807,
+                        "Clipped RMSE": 7.1496743721605736
+                    }
+                },
+                "Linear Trend": {
+                    "CPU utilization": {
+                        "MAE": 8.884888648986816,
+                        "RMSE": 12.39651437806555,
+                        "Clipped MAE": 8.703326225280762,
+                        "Clipped RMSE": 11.660594631625179
+                    },
+                    "Memory utilization": {
+                        "MAE": 7.338680744171143,
+                        "RMSE": 11.0113969196275,
+                        "Clipped MAE": 7.133132457733154,
+                        "Clipped RMSE": 9.883429297699113
+                    }
+                },
+                "Linear Regression": {
+                    "CPU utilization": {
+                        "MAE": 5.823846817016602,
+                        "RMSE": 7.7859781752995065,
+                        "Clipped MAE": 5.8228936195373535,
+                        "Clipped RMSE": 7.785855198256187
+                    },
+                    "Memory utilization": {
+                        "MAE": 5.7910919189453125,
+                        "RMSE": 7.752398950237441,
+                        "Clipped MAE": 5.7910919189453125,
+                        "Clipped RMSE": 7.752398950237441
+                    }
+                },
+                "Random Forest": {
+                    "CPU utilization": {
+                        "MAE": 5.922023646625143,
+                        "RMSE": 7.660641199349871,
+                        "Clipped MAE": 5.922023646625143,
+                        "Clipped RMSE": 7.660641199349871
+                    },
+                    "Memory utilization": {
+                        "MAE": 5.556886639574626,
+                        "RMSE": 7.623591343894458,
+                        "Clipped MAE": 5.556886639574626,
+                        "Clipped RMSE": 7.623591343894458
+                    }
+                }
+            },
+            "test": {
+                "Persistence": {
+                    "CPU utilization": {
+                        "MAE": 5.624025344848633,
+                        "RMSE": 7.346779056573262,
+                        "Clipped MAE": 5.624025344848633,
+                        "Clipped RMSE": 7.346779056573262
+                    },
+                    "Memory utilization": {
+                        "MAE": 4.569004058837891,
+                        "RMSE": 6.516238835462603,
+                        "Clipped MAE": 4.569004058837891,
+                        "Clipped RMSE": 6.516238835462603
+                    }
+                },
+                "Moving Average": {
+                    "CPU utilization": {
+                        "MAE": 7.735625743865967,
+                        "RMSE": 9.174571795956483,
+                        "Clipped MAE": 7.735625743865967,
+                        "Clipped RMSE": 9.174571795956483
+                    },
+                    "Memory utilization": {
+                        "MAE": 6.112610340118408,
+                        "RMSE": 7.586771454626555,
+                        "Clipped MAE": 6.112610340118408,
+                        "Clipped RMSE": 7.586771454626555
+                    }
+                },
+                "Linear Trend": {
+                    "CPU utilization": {
+                        "MAE": 8.734749794006348,
+                        "RMSE": 10.553893064337755,
+                        "Clipped MAE": 8.160202026367188,
+                        "Clipped RMSE": 9.901610626830925
+                    },
+                    "Memory utilization": {
+                        "MAE": 7.949488639831543,
+                        "RMSE": 10.122712807108345,
+                        "Clipped MAE": 7.918268203735352,
+                        "Clipped RMSE": 10.007372999107295
+                    }
+                },
+                "Linear Regression": {
+                    "CPU utilization": {
+                        "MAE": 6.4341630935668945,
+                        "RMSE": 7.706932999167834,
+                        "Clipped MAE": 6.433128833770752,
+                        "Clipped RMSE": 7.7067696574808044
+                    },
+                    "Memory utilization": {
+                        "MAE": 5.496346950531006,
+                        "RMSE": 6.588152059462027,
+                        "Clipped MAE": 5.496346950531006,
+                        "Clipped RMSE": 6.588152059462027
+                    }
+                },
+                "Random Forest": {
+                    "CPU utilization": {
+                        "MAE": 6.6984817522362015,
+                        "RMSE": 8.033913078195866,
+                        "Clipped MAE": 6.6984817522362015,
+                        "Clipped RMSE": 8.033913078195866
+                    },
+                    "Memory utilization": {
+                        "MAE": 5.619526162485186,
+                        "RMSE": 7.087082298630713,
+                        "Clipped MAE": 5.619526162485186,
+                        "Clipped RMSE": 7.087082298630713
+                    }
+                },
+                "LSTM V3": {
+                    "CPU utilization": {
+                        "LSTM": {
+                            "MAE": 7.033395537135262,
+                            "RMSE": 8.189959986945738
+                        },
+                        "LSTM clipped": {
+                            "MAE": 7.033395537135262,
+                            "RMSE": 8.189959986945738
+                        },
+                        "Persistence baseline": {
+                            "MAE": 5.624025368790277,
+                            "RMSE": 7.346779118604302
+                        }
+                    },
+                    "Memory utilization": {
+                        "LSTM": {
+                            "MAE": 6.326551715400688,
+                            "RMSE": 7.552968046786092
+                        },
+                        "LSTM clipped": {
+                            "MAE": 6.326551715400688,
+                            "RMSE": 7.552968046786092
+                        },
+                        "Persistence baseline": {
+                            "MAE": 4.569003775051061,
+                            "RMSE": 6.5162389552220255
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

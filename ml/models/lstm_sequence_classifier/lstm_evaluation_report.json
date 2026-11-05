@@ -1,0 +1,68 @@
+{
+    "model": "LSTM Sequence Classifier",
+    "device": "cpu",
+    "input_shape": [
+        12,
+        6
+    ],
+    "training_samples": 33150,
+    "validation_samples": 20475,
+    "test_samples": 37050,
+    "purged_samples": 33150,
+    "best_epoch": 4,
+    "validation_selected_threshold": {
+        "threshold": 0.11,
+        "precision": 0.72,
+        "recall": 0.8372093023255814,
+        "f1": 0.7741935483870968,
+        "alerts": 50
+    },
+    "test_metrics": {
+        "classification_accuracy": 0.920161943319838,
+        "classification_balanced_accuracy": 0.6902020223734154,
+        "classification_macro_f1": 0.7277601892932921,
+        "risk_threshold": 0.11,
+        "risk_precision": 0.5340314136125655,
+        "risk_recall": 0.379182156133829,
+        "risk_f1": 0.4434782608695652,
+        "risk_specificity": 0.997580272423262,
+        "risk_true_positives": 102,
+        "risk_false_positives": 89,
+        "risk_false_negatives": 167,
+        "risk_true_negatives": 36692,
+        "risk_alert_count": 191
+    },
+    "classification_report": {
+        "LOW_DEMAND": {
+            "precision": 0.8959090909090909,
+            "recall": 0.7431192660550459,
+            "f1-score": 0.812392663323487,
+            "support": 7957.0
+        },
+        "NORMAL_DEMAND": {
+            "precision": 0.9278752436647173,
+            "recall": 0.9743269497640855,
+            "f1-score": 0.9505339222555043,
+            "support": 28824.0
+        },
+        "HIGH_DEMAND": {
+            "precision": 0.5191256830601093,
+            "recall": 0.35315985130111527,
+            "f1-score": 0.42035398230088494,
+            "support": 269.0
+        },
+        "accuracy": 0.920161943319838,
+        "macro avg": {
+            "precision": 0.7809700058779724,
+            "recall": 0.6902020223734154,
+            "f1-score": 0.7277601892932921,
+            "support": 37050.0
+        },
+        "weighted avg": {
+            "precision": 0.9180423608231746,
+            "recall": 0.920161943319838,
+            "f1-score": 0.9170168264074652,
+            "support": 37050.0
+        }
+    }
+}

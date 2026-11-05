@@ -1,0 +1,252 @@
+{
+    "experiment": "CloudMorph Unified Forecasting Comparison",
+    "fixed_test_evaluation": {
+        "description": "Persistence, WMA, LSTM V3 and LSTM V4 evaluated on the existing fixed test split.",
+        "results": [
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "CPU",
+                "method": "Persistence",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 3.8253667979970714,
+                "RMSE": 4.982053969219625
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "CPU",
+                "method": "Weighted Moving Average",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 4.04423198068356,
+                "RMSE": 5.433507336939149
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "CPU",
+                "method": "LSTM V4",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 5.6139758879288735,
+                "RMSE": 6.696523266063717
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "CPU",
+                "method": "LSTM V3",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 5.9189576645007485,
+                "RMSE": 6.970881436295811
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "Memory",
+                "method": "Weighted Moving Average",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 3.603820785424724,
+                "RMSE": 5.0391736292324865
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "Memory",
+                "method": "Persistence",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 3.6179252457869326,
+                "RMSE": 4.810687904012511
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "Memory",
+                "method": "LSTM V3",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 5.113900066623823,
+                "RMSE": 6.348806398380681
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "15min",
+                "target": "Memory",
+                "method": "LSTM V4",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 5.136299441586943,
+                "RMSE": 6.434488427518508
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "CPU",
+                "method": "Persistence",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 5.624025370147903,
+                "RMSE": 7.3467791198391605
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "CPU",
+                "method": "Weighted Moving Average",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 6.110990146145849,
+                "RMSE": 7.771151345128416
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "CPU",
+                "method": "LSTM V3",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 7.033395537135262,
+                "RMSE": 8.189959986945738
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "CPU",
+                "method": "LSTM V4",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 7.105293861136067,
+                "RMSE": 8.290882153773108
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "Memory",
+                "method": "Persistence",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 4.5690037850448,
+                "RMSE": 6.516238966759741
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "Memory",
+                "method": "Weighted Moving Average",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 4.899269281537728,
+                "RMSE": 6.685739724417419
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "Memory",
+                "method": "LSTM V3",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 6.326551715400688,
+                "RMSE": 7.552968046786092
+            },
+            {
+                "evaluation": "fixed_test",
+                "horizon": "30min",
+                "target": "Memory",
+                "method": "LSTM V4",
+                "machines": 975,
+                "samples": 18525,
+                "MAE": 6.4681328549731525,
+                "RMSE": 7.718345791524367
+            }
+        ],
+        "winners": [
+            {
+                "horizon": "15min",
+                "target": "CPU",
+                "best_MAE_method": "Persistence",
+                "best_MAE": 3.8253667979970714,
+                "best_RMSE_method": "Persistence",
+                "best_RMSE": 4.982053969219625
+            },
+            {
+                "horizon": "15min",
+                "target": "Memory",
+                "best_MAE_method": "Weighted Moving Average",
+                "best_MAE": 3.603820785424724,
+                "best_RMSE_method": "Persistence",
+                "best_RMSE": 4.810687904012511
+            },
+            {
+                "horizon": "30min",
+                "target": "CPU",
+                "best_MAE_method": "Persistence",
+                "best_MAE": 5.624025370147903,
+                "best_RMSE_method": "Persistence",
+                "best_RMSE": 7.3467791198391605
+            },
+            {
+                "horizon": "30min",
+                "target": "Memory",
+                "best_MAE_method": "Persistence",
+                "best_MAE": 4.5690037850448,
+                "best_RMSE_method": "Persistence",
+                "best_RMSE": 6.516238966759741
+            }
+        ]
+    },
+    "rolling_origin_evaluation": {
+        "description": "Persistence and WMA evaluated across the existing rolling forecast origins.",
+        "results": [
+            {
+                "evaluation": "rolling_origin",
+                "fold": "Overall",
+                "horizon": "15min",
+                "target": "CPU",
+                "Persistence_MAE": 4.106584515416336,
+                "WMA_MAE": 4.027456002659851,
+                "Persistence_RMSE": 5.739773978630256,
+                "WMA_RMSE": 5.539722988974283
+            },
+            {
+                "evaluation": "rolling_origin",
+                "fold": "Overall",
+                "horizon": "15min",
+                "target": "Memory",
+                "Persistence_MAE": 4.396438605329314,
+                "WMA_MAE": 4.261525188626934,
+                "Persistence_RMSE": 6.0044094223187505,
+                "WMA_RMSE": 5.848558199157399
+            },
+            {
+                "evaluation": "rolling_origin",
+                "fold": "Overall",
+                "horizon": "30min",
+                "target": "CPU",
+                "Persistence_MAE": 5.285156620453893,
+                "WMA_MAE": 5.067351643014527,
+                "Persistence_RMSE": 7.2576893459255025,
+                "WMA_RMSE": 6.899346136310522
+            },
+            {
+                "evaluation": "rolling_origin",
+                "fold": "Overall",
+                "horizon": "30min",
+                "target": "Memory",
+                "Persistence_MAE": 5.270154317386294,
+                "WMA_MAE": 5.092257690114742,
+                "Persistence_RMSE": 7.369359140071535,
+                "WMA_RMSE": 7.139769859055951
+            }
+        ]
+    },
+    "interpretation": {
+        "fixed_test": "Compare methods using the same fixed test samples.",
+        "rolling_origin": "Compare Persistence and WMA across multiple chronological forecast origins.",
+        "important_note": "Fixed-test and rolling-origin metrics must not be combined into a single numerical ranking."
+    }
+}

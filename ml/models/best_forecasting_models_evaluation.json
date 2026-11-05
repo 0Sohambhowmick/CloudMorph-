@@ -1,0 +1,183 @@
+{
+    "experiment": "CloudMorph Best Forecasting Models Evaluation",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "input_window": 12,
+    "forecast_horizons_minutes": [
+        15,
+        30
+    ],
+    "validation_samples": 18525,
+    "test_samples": 18525,
+    "selection_metric": "Validation MAE",
+    "test_usage": "Final evaluation after model selection",
+    "results": {
+        "15min": {
+            "validation_results": {
+                "CPU utilization": {
+                    "Persistence": {
+                        "MAE": 4.25168514251709,
+                        "RMSE": 6.299463691287661
+                    },
+                    "Moving Average": {
+                        "MAE": 4.953086853027344,
+                        "RMSE": 6.814182178799532
+                    },
+                    "Linear Regression": {
+                        "MAE": 5.175882339477539,
+                        "RMSE": 6.879973953109051
+                    },
+                    "Random Forest": {
+                        "MAE": 5.384011805560846,
+                        "RMSE": 7.052781568790309
+                    },
+                    "Extra Trees": {
+                        "MAE": 5.541887595510083,
+                        "RMSE": 7.13159379832367
+                    },
+                    "Histogram Gradient Boosting": {
+                        "MAE": 5.262848423981738,
+                        "RMSE": 7.014588852673429
+                    }
+                },
+                "Memory utilization": {
+                    "Persistence": {
+                        "MAE": 3.9784555435180664,
+                        "RMSE": 5.767292722260444
+                    },
+                    "Moving Average": {
+                        "MAE": 4.089675426483154,
+                        "RMSE": 5.973735225361483
+                    },
+                    "Linear Regression": {
+                        "MAE": 4.9204912185668945,
+                        "RMSE": 6.701116087460876
+                    },
+                    "Random Forest": {
+                        "MAE": 4.994248031529109,
+                        "RMSE": 6.925275456482485
+                    },
+                    "Extra Trees": {
+                        "MAE": 5.14394778013794,
+                        "RMSE": 6.964292489670597
+                    },
+                    "Histogram Gradient Boosting": {
+                        "MAE": 4.966274930175505,
+                        "RMSE": 6.83283972009398
+                    }
+                }
+            },
+            "selected_models": {
+                "CPU utilization": {
+                    "model": "Persistence",
+                    "validation_MAE": 4.25168514251709
+                },
+                "Memory utilization": {
+                    "model": "Persistence",
+                    "validation_MAE": 3.9784555435180664
+                }
+            },
+            "final_test_results": {
+                "CPU utilization": {
+                    "selected_model": "Persistence",
+                    "validation_MAE": 4.25168514251709,
+                    "test_metrics": {
+                        "MAE": 3.825366973876953,
+                        "RMSE": 4.98205397566167
+                    }
+                },
+                "Memory utilization": {
+                    "selected_model": "Persistence",
+                    "validation_MAE": 3.9784555435180664,
+                    "test_metrics": {
+                        "MAE": 3.6179251670837402,
+                        "RMSE": 4.810687826231317
+                    }
+                }
+            }
+        },
+        "30min": {
+            "validation_results": {
+                "CPU utilization": {
+                    "Persistence": {
+                        "MAE": 5.877005100250244,
+                        "RMSE": 8.084608416584672
+                    },
+                    "Moving Average": {
+                        "MAE": 5.641845226287842,
+                        "RMSE": 7.727567879246946
+                    },
+                    "Linear Regression": {
+                        "MAE": 5.823846817016602,
+                        "RMSE": 7.7859781752995065
+                    },
+                    "Random Forest": {
+                        "MAE": 5.922023646625143,
+                        "RMSE": 7.660641199349871
+                    },
+                    "Extra Trees": {
+                        "MAE": 5.778106897237428,
+                        "RMSE": 7.502800900886317
+                    },
+                    "Histogram Gradient Boosting": {
+                        "MAE": 5.032799567456095,
+                        "RMSE": 6.878500798988443
+                    }
+                },
+                "Memory utilization": {
+                    "Persistence": {
+                        "MAE": 4.461427211761475,
+                        "RMSE": 6.781997569140823
+                    },
+                    "Moving Average": {
+                        "MAE": 4.891302585601807,
+                        "RMSE": 7.1496743721605736
+                    },
+                    "Linear Regression": {
+                        "MAE": 5.7910919189453125,
+                        "RMSE": 7.752398950237441
+                    },
+                    "Random Forest": {
+                        "MAE": 5.556886639574624,
+                        "RMSE": 7.623591343894458
+                    },
+                    "Extra Trees": {
+                        "MAE": 5.175577594868069,
+                        "RMSE": 7.148062103434819
+                    },
+                    "Histogram Gradient Boosting": {
+                        "MAE": 5.193256860094876,
+                        "RMSE": 7.153798703082472
+                    }
+                }
+            },
+            "selected_models": {
+                "CPU utilization": {
+                    "model": "Histogram Gradient Boosting",
+                    "validation_MAE": 5.032799567456095
+                },
+                "Memory utilization": {
+                    "model": "Persistence",
+                    "validation_MAE": 4.461427211761475
+                }
+            },
+            "final_test_results": {
+                "CPU utilization": {
+                    "selected_model": "Histogram Gradient Boosting",
+                    "validation_MAE": 5.032799567456095,
+                    "test_metrics": {
+                        "MAE": 6.262729128636761,
+                        "RMSE": 7.417047532482116
+                    }
+                },
+                "Memory utilization": {
+                    "selected_model": "Persistence",
+                    "validation_MAE": 4.461427211761475,
+                    "test_metrics": {
+                        "MAE": 4.569004058837891,
+                        "RMSE": 6.516238835462603
+                    }
+                }
+            }
+        }
+    }
+}

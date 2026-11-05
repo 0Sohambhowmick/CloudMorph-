@@ -1,0 +1,224 @@
+{
+    "experiment": "Validation-selected adaptive forecasting",
+    "selection_data": "Validation split only",
+    "final_evaluation_data": "Unseen test split only",
+    "selection_unit": [
+        "machineID",
+        "horizon",
+        "target"
+    ],
+    "methods": [
+        "Persistence",
+        "Moving Average",
+        "Linear Trend"
+    ],
+    "strategies": [
+        "Global Persistence",
+        "Global validation-selected",
+        "Per-machine validation-selected"
+    ],
+    "summary": [
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "strategy": "Global Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.8253667979970714,
+            "RMSE": 4.982053969219625
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "strategy": "Global validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.8253667979970714,
+            "RMSE": 4.982053969219625
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "strategy": "Per-machine validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.114610015481454,
+            "RMSE": 5.37786408494564
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "strategy": "Global Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.6179252457869326,
+            "RMSE": 4.810687904012511
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "strategy": "Per-machine validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.7607407307257055,
+            "RMSE": 5.159573437894194
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "strategy": "Global validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.7641796697392866,
+            "RMSE": 5.305029906048119
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "strategy": "Global Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 5.624025370147903,
+            "RMSE": 7.3467791198391605
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "strategy": "Per-machine validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 6.426165624936761,
+            "RMSE": 8.058413438358837
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "strategy": "Global validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 6.492273771689042,
+            "RMSE": 8.118431293934659
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "strategy": "Global Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.5690037850448,
+            "RMSE": 6.516238966759741
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "strategy": "Global validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.5690037850448,
+            "RMSE": 6.516238966759741
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "strategy": "Per-machine validation-selected",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.825986800769434,
+            "RMSE": 6.659982728362939
+        }
+    ],
+    "selection_frequency": [
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "selected_method": "Persistence",
+            "machines": 536,
+            "percentage": 54.97435897435897
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "selected_method": "Moving Average",
+            "machines": 378,
+            "percentage": 38.76923076923077
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "selected_method": "Linear Trend",
+            "machines": 61,
+            "percentage": 6.256410256410256
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "selected_method": "Moving Average",
+            "machines": 531,
+            "percentage": 54.46153846153846
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "selected_method": "Persistence",
+            "machines": 394,
+            "percentage": 40.41025641025641
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "selected_method": "Linear Trend",
+            "machines": 50,
+            "percentage": 5.128205128205128
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "selected_method": "Moving Average",
+            "machines": 785,
+            "percentage": 80.51282051282051
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "selected_method": "Persistence",
+            "machines": 176,
+            "percentage": 18.05128205128205
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "selected_method": "Linear Trend",
+            "machines": 14,
+            "percentage": 1.435897435897436
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "selected_method": "Persistence",
+            "machines": 533,
+            "percentage": 54.666666666666664
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "selected_method": "Moving Average",
+            "machines": 425,
+            "percentage": 43.58974358974359
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "selected_method": "Linear Trend",
+            "machines": 17,
+            "percentage": 1.7435897435897436
+        }
+    ],
+    "outputs": {
+        "global_validation_scores": "ml\\models\\adaptive_global_validation_scores.csv",
+        "machine_validation_scores": "ml\\models\\adaptive_machine_validation_scores.csv",
+        "machine_method_selection": "ml\\models\\adaptive_machine_method_selection.csv",
+        "method_selection_frequency": "ml\\models\\adaptive_method_selection_frequency.csv",
+        "test_predictions": "ml\\models\\adaptive_test_strategy_predictions.csv",
+        "summary_csv": "ml\\models\\adaptive_forecasting_test_comparison.csv"
+    }
+}

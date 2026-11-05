@@ -1,0 +1,39 @@
+{
+    "experiment": "Paired machine-level bootstrap comparison",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "horizon": "15min",
+    "target": "Memory",
+    "baseline_method": "Persistence",
+    "comparison_method": "Weighted Moving Average",
+    "resampling_unit": "Complete machine",
+    "resampling_strategy": "Paired bootstrap with replacement",
+    "random_state": 42,
+    "results": {
+        "machines": 975,
+        "bootstrap_iterations": 10000,
+        "confidence_level": 0.95,
+        "persistence_MAE": 3.617925245786932,
+        "weighted_MAE": 3.6038207854247237,
+        "MAE_difference_weighted_minus_persistence": -0.014104460362208603,
+        "MAE_difference_95CI": {
+            "lower": -0.030103580933634244,
+            "upper": 0.002612136323067215
+        },
+        "persistence_RMSE": 4.810687904012511,
+        "weighted_RMSE": 5.039173629232486,
+        "RMSE_difference_weighted_minus_persistence": 0.2284857252199748,
+        "RMSE_difference_95CI": {
+            "lower": 0.20436963354235432,
+            "upper": 0.25537001510890434
+        },
+        "weighted_machine_win_rate": 0.5241025641025641,
+        "weighted_machine_win_count": 511,
+        "persistence_machine_win_count": 461,
+        "machine_tie_count": 3
+    },
+    "interpretation": {
+        "MAE_interpretation": "The 95% paired bootstrap confidence interval includes zero. The MAE difference is not clearly distinguishable from zero.",
+        "RMSE_interpretation": "Weighted Moving Average has a higher RMSE with a confidence interval above zero.",
+        "production_recommendation": "Keep Persistence as the production baseline until the evidence supports a reliable improvement."
+    }
+}

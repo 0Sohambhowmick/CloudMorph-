@@ -1,0 +1,207 @@
+{
+    "project": "CloudMorph",
+    "evaluation": "Chronological validation-based threshold selection",
+    "model": "Extra Trees",
+    "model_version": "1.0.0",
+    "split": {
+        "training_samples": 33150,
+        "validation_samples": 20475,
+        "test_samples": 37050,
+        "purged_samples": 33150,
+        "validation_start_history_step": 51.0,
+        "test_start_history_step": 89.0
+    },
+    "threshold_selection": {
+        "method": "Maximum validation HIGH_DEMAND F1",
+        "minimum_validation_precision": 0.6,
+        "selected_threshold": 0.3,
+        "validation_results": [
+            {
+                "threshold": 0.01,
+                "precision": 0.39090909090909093,
+                "recall": 1.0,
+                "f1": 0.5620915032679739,
+                "predicted_high_cases": 110,
+                "actual_high_cases": 43,
+                "true_positives": 43,
+                "false_positives": 67,
+                "false_negatives": 0
+            },
+            {
+                "threshold": 0.02,
+                "precision": 0.4666666666666667,
+                "recall": 0.9767441860465116,
+                "f1": 0.631578947368421,
+                "predicted_high_cases": 90,
+                "actual_high_cases": 43,
+                "true_positives": 42,
+                "false_positives": 48,
+                "false_negatives": 1
+            },
+            {
+                "threshold": 0.03,
+                "precision": 0.5263157894736842,
+                "recall": 0.9302325581395349,
+                "f1": 0.6722689075630253,
+                "predicted_high_cases": 76,
+                "actual_high_cases": 43,
+                "true_positives": 40,
+                "false_positives": 36,
+                "false_negatives": 3
+            },
+            {
+                "threshold": 0.05,
+                "precision": 0.5797101449275363,
+                "recall": 0.9302325581395349,
+                "f1": 0.7142857142857143,
+                "predicted_high_cases": 69,
+                "actual_high_cases": 43,
+                "true_positives": 40,
+                "false_positives": 29,
+                "false_negatives": 3
+            },
+            {
+                "threshold": 0.075,
+                "precision": 0.6060606060606061,
+                "recall": 0.9302325581395349,
+                "f1": 0.7339449541284404,
+                "predicted_high_cases": 66,
+                "actual_high_cases": 43,
+                "true_positives": 40,
+                "false_positives": 26,
+                "false_negatives": 3
+            },
+            {
+                "threshold": 0.1,
+                "precision": 0.6349206349206349,
+                "recall": 0.9302325581395349,
+                "f1": 0.7547169811320755,
+                "predicted_high_cases": 63,
+                "actual_high_cases": 43,
+                "true_positives": 40,
+                "false_positives": 23,
+                "false_negatives": 3
+            },
+            {
+                "threshold": 0.15,
+                "precision": 0.6349206349206349,
+                "recall": 0.9302325581395349,
+                "f1": 0.7547169811320755,
+                "predicted_high_cases": 63,
+                "actual_high_cases": 43,
+                "true_positives": 40,
+                "false_positives": 23,
+                "false_negatives": 3
+            },
+            {
+                "threshold": 0.2,
+                "precision": 0.6349206349206349,
+                "recall": 0.9302325581395349,
+                "f1": 0.7547169811320755,
+                "predicted_high_cases": 63,
+                "actual_high_cases": 43,
+                "true_positives": 40,
+                "false_positives": 23,
+                "false_negatives": 3
+            },
+            {
+                "threshold": 0.3,
+                "precision": 0.6909090909090909,
+                "recall": 0.8837209302325582,
+                "f1": 0.7755102040816326,
+                "predicted_high_cases": 55,
+                "actual_high_cases": 43,
+                "true_positives": 38,
+                "false_positives": 17,
+                "false_negatives": 5
+            },
+            {
+                "threshold": 0.4,
+                "precision": 0.7619047619047619,
+                "recall": 0.7441860465116279,
+                "f1": 0.7529411764705882,
+                "predicted_high_cases": 42,
+                "actual_high_cases": 43,
+                "true_positives": 32,
+                "false_positives": 10,
+                "false_negatives": 11
+            },
+            {
+                "threshold": 0.5,
+                "precision": 0.8333333333333334,
+                "recall": 0.5813953488372093,
+                "f1": 0.684931506849315,
+                "predicted_high_cases": 30,
+                "actual_high_cases": 43,
+                "true_positives": 25,
+                "false_positives": 5,
+                "false_negatives": 18
+            }
+        ]
+    },
+    "default_test_metrics": {
+        "accuracy": 0.8330634278002699,
+        "balanced_accuracy": 0.4829436817810613,
+        "macro_f1": 0.5385553907320951,
+        "high_demand_precision": 0.7246376811594203,
+        "high_demand_recall": 0.18587360594795538,
+        "high_demand_f1": 0.2958579881656805,
+        "predicted_high_cases": 69,
+        "actual_high_cases": 269
+    },
+    "adjusted_test_metrics": {
+        "accuracy": 0.8346018893387315,
+        "balanced_accuracy": 0.5879482542476929,
+        "macro_f1": 0.6392977265063337,
+        "high_demand_precision": 0.7377049180327869,
+        "high_demand_recall": 0.5018587360594795,
+        "high_demand_f1": 0.5973451327433629,
+        "predicted_high_cases": 183,
+        "actual_high_cases": 269
+    },
+    "adjusted_classification_report": {
+        "LOW_DEMAND": {
+            "precision": 0.9408388520971303,
+            "recall": 0.2678145029533744,
+            "f1-score": 0.416943846605361,
+            "support": 7957.0
+        },
+        "NORMAL_DEMAND": {
+            "precision": 0.8281602219524883,
+            "recall": 0.9941715237302248,
+            "f1-score": 0.9036042001702772,
+            "support": 28824.0
+        },
+        "HIGH_DEMAND": {
+            "precision": 0.7377049180327869,
+            "recall": 0.5018587360594795,
+            "f1-score": 0.5973451327433629,
+            "support": 269.0
+        },
+        "accuracy": 0.8346018893387315,
+        "macro avg": {
+            "precision": 0.8355679973608018,
+            "recall": 0.5879482542476929,
+            "f1-score": 0.6392977265063337,
+            "support": 37050.0
+        },
+        "weighted avg": {
+            "precision": 0.8517027694101541,
+            "recall": 0.8346018893387315,
+            "f1-score": 0.7968635760824532,
+            "support": 37050.0
+        }
+    },
+    "important_notes": [
+        "Threshold was selected using validation data only.",
+        "The final test set was not used for threshold selection.",
+        "The temporal model was trained only on the earliest period.",
+        "Overlapping target windows were purged at both boundaries.",
+        "The same machines appear in all chronological periods.",
+        "The production classifier was not modified.",
+        "Threshold adjustment changes the HIGH_DEMAND decision rule.",
+        "This experiment does not establish long-term production performance.",
+        "Workload labels represent derived future utilization conditions.",
+        "No cloud resources are modified."
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "model": "Extra Trees",
+    "threshold": 0.3,
+    "test_windows": 37050,
+    "actual_high_windows": 269,
+    "missed_windows": 134,
+    "independent_missed_events": 19,
+    "machines_with_missed_events": 17,
+    "events_with_overlapping_detection": 11,
+    "events_without_overlapping_detection": 8,
+    "event_driver_counts": {
+        "MEMORY": 18,
+        "CPU_AND_MEMORY": 1
+    },
+    "important_note": "Events are groups of overlapping or adjacent missed target windows for the same machine. Event drivers use future utilization peaks. Overlapping detection is not equivalent to early warning or event-level recall."
+}

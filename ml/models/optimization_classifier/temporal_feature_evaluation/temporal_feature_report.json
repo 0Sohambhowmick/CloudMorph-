@@ -1,0 +1,125 @@
+{
+    "project": "CloudMorph",
+    "experiment": "Temporal feature engineering",
+    "baseline_feature_count": 55,
+    "enhanced_feature_count": 63,
+    "added_temporal_features": [
+        "memory_last_delta",
+        "memory_recent_delta",
+        "memory_positive_steps",
+        "memory_max_rise",
+        "memory_acceleration",
+        "cpu_last_delta",
+        "cpu_recent_delta",
+        "cpu_positive_steps"
+    ],
+    "split": {
+        "training_samples": 33150,
+        "validation_samples": 20475,
+        "test_samples": 37050,
+        "purged_samples": 33150,
+        "validation_start_step": 51,
+        "test_start_step": 89
+    },
+    "threshold_selection": {
+        "method": "Maximum validation HIGH_DEMAND F1 subject to precision >= 0.60",
+        "baseline": {
+            "threshold": 0.319943871875645,
+            "precision": 0.74,
+            "recall": 0.8604651162790697,
+            "f1": 0.7956989247311828,
+            "alerts": 50
+        },
+        "enhanced": {
+            "threshold": 0.30321603982109163,
+            "precision": 0.7547169811320755,
+            "recall": 0.9302325581395349,
+            "f1": 0.8333333333333334,
+            "alerts": 53
+        }
+    },
+    "baseline": {
+        "classification": {
+            "accuracy": 0.8330634278002699,
+            "balanced_accuracy": 0.4829436817810613,
+            "macro_f1": 0.5385553907320951,
+            "high_demand_precision": 0.7246376811594203,
+            "high_demand_recall": 0.18587360594795538,
+            "high_demand_f1": 0.2958579881656805
+        },
+        "risk": {
+            "precision": 0.7267441860465116,
+            "recall": 0.4646840148698885,
+            "f1": 0.5668934240362812,
+            "true_positives": 125,
+            "false_positives": 47,
+            "false_negatives": 144,
+            "true_negatives": 36734,
+            "total_alerts": 172
+        },
+        "confusion_matrix": [
+            [
+                2131,
+                5826,
+                0
+            ],
+            [
+                121,
+                28684,
+                19
+            ],
+            [
+                13,
+                206,
+                50
+            ]
+        ]
+    },
+    "enhanced": {
+        "classification": {
+            "accuracy": 0.8311470985155196,
+            "balanced_accuracy": 0.47008929657746695,
+            "macro_f1": 0.5207891974285684,
+            "high_demand_precision": 0.7017543859649122,
+            "high_demand_recall": 0.14869888475836432,
+            "high_demand_f1": 0.24539877300613497
+        },
+        "risk": {
+            "precision": 0.7349397590361446,
+            "recall": 0.45353159851301117,
+            "f1": 0.5609195402298851,
+            "true_positives": 122,
+            "false_positives": 44,
+            "false_negatives": 147,
+            "true_negatives": 36737,
+            "total_alerts": 166
+        },
+        "confusion_matrix": [
+            [
+                2139,
+                5818,
+                0
+            ],
+            [
+                192,
+                28615,
+                17
+            ],
+            [
+                12,
+                217,
+                40
+            ]
+        ]
+    },
+    "important_notes": [
+        "Both models use identical chronological splits.",
+        "Both models use identical Extra Trees configuration.",
+        "Temporal features use historical observations only.",
+        "Future observations are used only for labels.",
+        "Each model's risk threshold is selected using validation data only.",
+        "Final test data is not used for threshold selection.",
+        "The production model and dataset were not modified.",
+        "The enhanced model is experimental and not deployed."
+    ]
+}

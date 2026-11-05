@@ -1,0 +1,79 @@
+{
+    "experiment": "CloudMorph Multi-Horizon LSTM V3",
+    "window_size": 12,
+    "forecast_horizons": [
+        15,
+        30
+    ],
+    "best_epoch": 1,
+    "best_validation_loss": 0.37246581236521403,
+    "architecture": {
+        "input_size": 6,
+        "hidden_size": 64,
+        "num_layers": 1,
+        "dropout": 0.2
+    },
+    "test_sample_count": 18525,
+    "test_metrics": {
+        "15min": {
+            "CPU utilization": {
+                "LSTM": {
+                    "MAE": 5.9189576645007485,
+                    "RMSE": 6.970881436295811
+                },
+                "LSTM clipped": {
+                    "MAE": 5.9189576645007485,
+                    "RMSE": 6.970881436295811
+                },
+                "Persistence baseline": {
+                    "MAE": 3.825366802300988,
+                    "RMSE": 4.982053972396649
+                }
+            },
+            "Memory utilization": {
+                "LSTM": {
+                    "MAE": 5.113900066623823,
+                    "RMSE": 6.348806398380681
+                },
+                "LSTM clipped": {
+                    "MAE": 5.113900066623823,
+                    "RMSE": 6.348806398380681
+                },
+                "Persistence baseline": {
+                    "MAE": 3.617925275223864,
+                    "RMSE": 4.810687901081666
+                }
+            }
+        },
+        "30min": {
+            "CPU utilization": {
+                "LSTM": {
+                    "MAE": 7.033395537135262,
+                    "RMSE": 8.189959986945738
+                },
+                "LSTM clipped": {
+                    "MAE": 7.033395537135262,
+                    "RMSE": 8.189959986945738
+                },
+                "Persistence baseline": {
+                    "MAE": 5.624025368790277,
+                    "RMSE": 7.346779118604302
+                }
+            },
+            "Memory utilization": {
+                "LSTM": {
+                    "MAE": 6.326551715400688,
+                    "RMSE": 7.552968046786092
+                },
+                "LSTM clipped": {
+                    "MAE": 6.326551715400688,
+                    "RMSE": 7.552968046786092
+                },
+                "Persistence baseline": {
+                    "MAE": 4.569003775051061,
+                    "RMSE": 6.5162389552220255
+                }
+            }
+        }
+    }
+}

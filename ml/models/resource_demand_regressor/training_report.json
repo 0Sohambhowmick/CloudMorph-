@@ -1,0 +1,167 @@
+{
+    "project": "CloudMorph",
+    "task": "Future peak resource demand regression",
+    "model_version": "1.0.0",
+    "input_history_minutes": 60,
+    "prediction_horizon_minutes": 30,
+    "future_observations": 6,
+    "feature_count": 55,
+    "feature_columns": [
+        "util_CPU_current",
+        "util_CPU_mean",
+        "util_CPU_std",
+        "util_CPU_min",
+        "util_CPU_max",
+        "util_CPU_median",
+        "util_CPU_recent_mean",
+        "util_CPU_previous_mean",
+        "util_CPU_trend",
+        "util_memory_current",
+        "util_memory_mean",
+        "util_memory_std",
+        "util_memory_min",
+        "util_memory_max",
+        "util_memory_median",
+        "util_memory_recent_mean",
+        "util_memory_previous_mean",
+        "util_memory_trend",
+        "util_disk_current",
+        "util_disk_mean",
+        "util_disk_std",
+        "util_disk_min",
+        "util_disk_max",
+        "util_disk_median",
+        "util_disk_recent_mean",
+        "util_disk_previous_mean",
+        "util_disk_trend",
+        "load1_current",
+        "load1_mean",
+        "load1_std",
+        "load1_min",
+        "load1_max",
+        "load1_median",
+        "load1_recent_mean",
+        "load1_previous_mean",
+        "load1_trend",
+        "load5_current",
+        "load5_mean",
+        "load5_std",
+        "load5_min",
+        "load5_max",
+        "load5_median",
+        "load5_recent_mean",
+        "load5_previous_mean",
+        "load5_trend",
+        "load15_current",
+        "load15_mean",
+        "load15_std",
+        "load15_min",
+        "load15_max",
+        "load15_median",
+        "load15_recent_mean",
+        "load15_previous_mean",
+        "load15_trend",
+        "cpu_memory_correlation"
+    ],
+    "dataset": {
+        "total_samples": 123825,
+        "unique_machines": 975,
+        "target_source": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\datasets\\processed\\server_usage_clean.csv",
+        "feature_source": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\data\\optimization_training_dataset.csv"
+    },
+    "targets": {
+        "cpu": {
+            "target_column": "future_peak_cpu",
+            "description": "Maximum observed CPU utilization in the next 30 minutes.",
+            "selected_model": "Extra Trees",
+            "test_metrics": {
+                "mae": 2.217629801414197,
+                "rmse": 3.329352833900568,
+                "r2": 0.9109311660286737
+            },
+            "model_path": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\models\\resource_demand_regressor\\cpu_peak_regressor.joblib",
+            "split": {
+                "training_samples": 74295,
+                "validation_samples": 24765,
+                "test_samples": 24765,
+                "training_machines": 585,
+                "validation_machines": 195,
+                "test_machines": 195
+            },
+            "validation_comparison": [
+                {
+                    "target": "cpu",
+                    "model": "Random Forest",
+                    "mae": 2.2505785354187737,
+                    "rmse": 3.128128073508064,
+                    "r2": 0.9182675024024105
+                },
+                {
+                    "target": "cpu",
+                    "model": "Extra Trees",
+                    "mae": 2.2413388307177873,
+                    "rmse": 3.065708933212628,
+                    "r2": 0.9214967643419433
+                }
+            ]
+        },
+        "memory": {
+            "target_column": "future_peak_memory",
+            "description": "Maximum observed memory utilization in the next 30 minutes.",
+            "selected_model": "Extra Trees",
+            "test_metrics": {
+                "mae": 2.331789580606482,
+                "rmse": 3.490123223095811,
+                "r2": 0.9396908320207753
+            },
+            "model_path": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\models\\resource_demand_regressor\\memory_peak_regressor.joblib",
+            "split": {
+                "training_samples": 74295,
+                "validation_samples": 24765,
+                "test_samples": 24765,
+                "training_machines": 585,
+                "validation_machines": 195,
+                "test_machines": 195
+            },
+            "validation_comparison": [
+                {
+                    "target": "memory",
+                    "model": "Random Forest",
+                    "mae": 2.378645193356712,
+                    "rmse": 3.2768704310832253,
+                    "r2": 0.9444145610222973
+                },
+                {
+                    "target": "memory",
+                    "model": "Extra Trees",
+                    "mae": 2.32195265175278,
+                    "rmse": 3.1927485752288987,
+                    "r2": 0.9472318412805422
+                }
+            ]
+        }
+    },
+    "methodology": {
+        "split": "GroupShuffleSplit by machineID",
+        "split_proportions": {
+            "training": 0.6,
+            "validation": 0.2,
+            "testing": 0.2
+        },
+        "model_selection": "Lowest validation MAE, followed by validation RMSE.",
+        "evaluation_metrics": [
+            "MAE",
+            "RMSE",
+            "R2"
+        ]
+    },
+    "important_notes": [
+        "Targets are derived from future observed workload.",
+        "Historical features only are used as model inputs.",
+        "Machine-aware splitting prevents machine overlap.",
+        "The model predicts resource demand, not cloud cost.",
+        "Predictions are not verified cloud resizing outcomes.",
+        "No cloud resources are modified by this model.",
+        "Manual USD cost calculations remain separate."
+    ]
+}

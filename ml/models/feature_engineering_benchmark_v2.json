@@ -1,0 +1,130 @@
+{
+    "experiment": "CloudMorph Feature Engineering Benchmark V2",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "input_window": 12,
+    "forecast_horizons_minutes": [
+        15,
+        30
+    ],
+    "training_samples": 80925,
+    "validation_samples": 18525,
+    "engineered_feature_count": 78,
+    "feature_groups": [
+        "latest_values",
+        "mean",
+        "standard_deviation",
+        "minimum",
+        "maximum",
+        "median",
+        "first_observation",
+        "overall_change",
+        "recent_3_observation_mean",
+        "recent_6_observation_mean",
+        "recent_3_observation_std",
+        "recent_6_observation_std",
+        "historical_slope"
+    ],
+    "extra_trees_config": {
+        "n_estimators": 200,
+        "max_features": 0.8,
+        "min_samples_leaf": 3,
+        "n_jobs": -1,
+        "random_state": 42
+    },
+    "hist_gradient_config": {
+        "max_iter": 150,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "early_stopping": true,
+        "validation_fraction": 0.1,
+        "n_iter_no_change": 10,
+        "random_state": 42
+    },
+    "results": {
+        "15min": {
+            "Persistence": {
+                "CPU utilization": {
+                    "MAE": 4.25168514251709,
+                    "RMSE": 6.299463691287661
+                },
+                "Memory utilization": {
+                    "MAE": 3.9784555435180664,
+                    "RMSE": 5.767292722260444
+                }
+            },
+            "Moving Average": {
+                "CPU utilization": {
+                    "MAE": 4.953086853027344,
+                    "RMSE": 6.814182178799532
+                },
+                "Memory utilization": {
+                    "MAE": 4.089675426483154,
+                    "RMSE": 5.973735225361483
+                }
+            },
+            "Extra Trees": {
+                "CPU utilization": {
+                    "MAE": 5.541887595510084,
+                    "RMSE": 7.13159379832367
+                },
+                "Memory utilization": {
+                    "MAE": 5.14394778013794,
+                    "RMSE": 6.964292489670597
+                }
+            },
+            "Histogram Gradient Boosting": {
+                "CPU utilization": {
+                    "MAE": 5.262848423981738,
+                    "RMSE": 7.014588852673429
+                },
+                "Memory utilization": {
+                    "MAE": 4.966274930175505,
+                    "RMSE": 6.83283972009398
+                }
+            }
+        },
+        "30min": {
+            "Persistence": {
+                "CPU utilization": {
+                    "MAE": 5.877005100250244,
+                    "RMSE": 8.084608416584672
+                },
+                "Memory utilization": {
+                    "MAE": 4.461427211761475,
+                    "RMSE": 6.781997569140823
+                }
+            },
+            "Moving Average": {
+                "CPU utilization": {
+                    "MAE": 5.641845226287842,
+                    "RMSE": 7.727567879246946
+                },
+                "Memory utilization": {
+                    "MAE": 4.891302585601807,
+                    "RMSE": 7.1496743721605736
+                }
+            },
+            "Extra Trees": {
+                "CPU utilization": {
+                    "MAE": 5.778106897237428,
+                    "RMSE": 7.502800900886317
+                },
+                "Memory utilization": {
+                    "MAE": 5.17557759486807,
+                    "RMSE": 7.14806210343482
+                }
+            },
+            "Histogram Gradient Boosting": {
+                "CPU utilization": {
+                    "MAE": 5.032799567456095,
+                    "RMSE": 6.878500798988443
+                },
+                "Memory utilization": {
+                    "MAE": 5.193256860094876,
+                    "RMSE": 7.153798703082472
+                }
+            }
+        }
+    }
+}

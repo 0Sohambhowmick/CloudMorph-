@@ -1,0 +1,75 @@
+{
+    "model": "Trend-Aware LSTM",
+    "device": "cpu",
+    "sequence_input_shape": [
+        12,
+        6
+    ],
+    "trend_feature_count": 4,
+    "trend_feature_names": [
+        "cpu_recent_change",
+        "memory_recent_change",
+        "cpu_recent_mean",
+        "memory_recent_mean"
+    ],
+    "training_samples": 33150,
+    "validation_samples": 20475,
+    "test_samples": 37050,
+    "purged_samples": 33150,
+    "best_epoch": 3,
+    "validation_selected_threshold": {
+        "threshold": 0.6,
+        "precision": 0.7346938775510204,
+        "recall": 0.8372093023255814,
+        "f1": 0.782608695652174,
+        "alerts": 49
+    },
+    "test_metrics": {
+        "classification_accuracy": 0.9012955465587045,
+        "classification_balanced_accuracy": 0.6546286944554783,
+        "classification_macro_f1": 0.7002226389118081,
+        "risk_threshold": 0.6,
+        "risk_precision": 0.5260115606936416,
+        "risk_recall": 0.3382899628252788,
+        "risk_f1": 0.4117647058823529,
+        "risk_specificity": 0.997770588075365,
+        "risk_true_positives": 91,
+        "risk_false_positives": 82,
+        "risk_false_negatives": 178,
+        "risk_true_negatives": 36699,
+        "risk_alert_count": 173
+    },
+    "classification_report": {
+        "LOW_DEMAND": {
+            "precision": 0.8952513966480447,
+            "recall": 0.6444639939675757,
+            "f1-score": 0.7494336865180855,
+            "support": 7957.0
+        },
+        "NORMAL_DEMAND": {
+            "precision": 0.9046044181864886,
+            "recall": 0.9774146544546212,
+            "f1-score": 0.9396011205976521,
+            "support": 28824.0
+        },
+        "HIGH_DEMAND": {
+            "precision": 0.5168539325842697,
+            "recall": 0.3420074349442379,
+            "f1-score": 0.4116331096196868,
+            "support": 269.0
+        },
+        "accuracy": 0.9012955465587045,
+        "macro avg": {
+            "precision": 0.7722365824729343,
+            "recall": 0.6546286944554783,
+            "f1-score": 0.7002226389118081,
+            "support": 37050.0
+        },
+        "weighted avg": {
+            "precision": 0.8997804809932797,
+            "recall": 0.9012955465587045,
+            "f1-score": 0.8949267435956498,
+            "support": 37050.0
+        }
+    }
+}

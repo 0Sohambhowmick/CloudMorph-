@@ -1,0 +1,120 @@
+{
+    "project": "CloudMorph",
+    "experiment": "63-Feature Temporal Extra Trees",
+    "status": "experimental",
+    "model_version": "temporal-experimental-1.0.0",
+    "dataset": {
+        "path": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\models\\temporal_features_experiment\\temporal_features_dataset.csv",
+        "samples": 123825,
+        "feature_count": 63,
+        "experimental_features": [
+            "memory_recent_max",
+            "cpu_recent_max",
+            "memory_recent_slope",
+            "memory_previous_slope",
+            "memory_acceleration",
+            "memory_recent_long_gap",
+            "memory_recent_range",
+            "memory_growth_per_5min"
+        ],
+        "class_distribution": {
+            "NORMAL_DEMAND": 105636,
+            "LOW_DEMAND": 17676,
+            "HIGH_DEMAND": 513
+        }
+    },
+    "model_configuration": {
+        "n_estimators": 300,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+    },
+    "split": {
+        "training_samples": 33150,
+        "validation_samples": 20475,
+        "test_samples": 37050,
+        "purged_samples": 33150,
+        "validation_start_history_step": 51.0,
+        "test_start_history_step": 89.0,
+        "counts": [
+            33150,
+            20475,
+            37050
+        ]
+    },
+    "threshold_selection": {
+        "method": "Maximum validation F1 subject to minimum precision",
+        "minimum_validation_precision": 0.6,
+        "selected_threshold": 0.38,
+        "test_data_used_for_threshold_selection": false
+    },
+    "test_classification_metrics": {
+        "accuracy": 0.8328744939271255,
+        "balanced_accuracy": 0.4775739331927098,
+        "macro_f1": 0.5312517933947158,
+        "high_demand_precision": 0.7142857142857143,
+        "high_demand_recall": 0.16728624535315986
+    },
+    "test_independent_risk_metrics": {
+        "precision": 0.71875,
+        "recall": 0.3420074349442379,
+        "specificity": 0.9990212337891846,
+        "f1": 0.4634760705289673,
+        "true_positives": 92,
+        "false_positives": 36,
+        "false_negatives": 177,
+        "true_negatives": 36745,
+        "risk_alerts": 128,
+        "actual_high_demand_cases": 269
+    },
+    "test_classification_report": {
+        "LOW_DEMAND": {
+            "precision": 0.9290017211703959,
+            "recall": 0.27133341711700387,
+            "f1-score": 0.4199980546639432,
+            "support": 7957.0
+        },
+        "NORMAL_DEMAND": {
+            "precision": 0.8266451259267807,
+            "recall": 0.9941021371079656,
+            "f1-score": 0.9026729881708067,
+            "support": 28824.0
+        },
+        "HIGH_DEMAND": {
+            "precision": 0.7142857142857143,
+            "recall": 0.16728624535315986,
+            "f1-score": 0.2710843373493976,
+            "support": 269.0
+        },
+        "accuracy": 0.8328744939271255,
+        "macro avg": {
+            "precision": 0.8233108537942969,
+            "recall": 0.4775739331927098,
+            "f1-score": 0.5312517933947158,
+            "support": 37050.0
+        },
+        "weighted avg": {
+            "precision": 0.8478118397357417,
+            "recall": 0.8328744939271255,
+            "f1-score": 0.7944262461199275,
+            "support": 37050.0
+        }
+    },
+    "important_notes": [
+        "The 63-feature enhanced dataset was loaded directly.",
+        "All eight added features are derived from historical observations.",
+        "Future observations are used exclusively for workload labels.",
+        "The same chronological split and purging helper as the 57-feature experiment was reused.",
+        "The same Extra Trees configuration was reused.",
+        "The risk threshold was selected using validation data only.",
+        "The test period was not used for model or threshold selection.",
+        "The same machines may occur in all chronological periods; this is not an unseen-machine evaluation.",
+        "The original production model and existing 57-feature experiment were not modified.",
+        "This model is experimental and is not deployed to the API.",
+        "HIGH_RISK is a model-based warning, not a confirmed incident.",
+        "No cloud resources are modified.",
+        "The validation high-demand sample count is small; threshold stability is limited."
+    ]
+}

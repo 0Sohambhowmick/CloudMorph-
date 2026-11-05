@@ -1,0 +1,43 @@
+{
+    "experiment": "LSTM Version 2",
+    "window_size": 24,
+    "forecast_horizon": 1,
+    "best_epoch": 4,
+    "best_validation_loss": 0.19598734837311965,
+    "architecture": {
+        "input_size": 6,
+        "hidden_size": 128,
+        "num_layers": 2,
+        "dropout": 0.2
+    },
+    "test_metrics": {
+        "CPU utilization": {
+            "LSTM": {
+                "MAE": 3.4161810828351995,
+                "RMSE": 4.275001703426622
+            },
+            "LSTM clipped": {
+                "MAE": 3.4161810828351995,
+                "RMSE": 4.275001703426622
+            },
+            "Persistence baseline": {
+                "MAE": 2.5564205123254715,
+                "RMSE": 3.43023304974552
+            }
+        },
+        "Memory utilization": {
+            "LSTM": {
+                "MAE": 3.1142107909795174,
+                "RMSE": 4.116924785178896
+            },
+            "LSTM clipped": {
+                "MAE": 3.1142107909795174,
+                "RMSE": 4.116924785178896
+            },
+            "Persistence baseline": {
+                "MAE": 2.160574386223292,
+                "RMSE": 3.056867933923892
+            }
+        }
+    }
+}

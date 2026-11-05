@@ -1,0 +1,245 @@
+{
+    "experiment": "Improved forecasting baseline benchmark",
+    "dataset": "Alibaba Cluster Trace 2017",
+    "machines": 975,
+    "input_window_observations": 12,
+    "observation_interval_minutes": 5,
+    "forecast_horizons": {
+        "15min": 3,
+        "30min": 6
+    },
+    "validation_origins": [
+        97,
+        115
+    ],
+    "test_origins": [
+        119,
+        137
+    ],
+    "methods": [
+        "Persistence",
+        "EMA",
+        "Weighted Moving Average",
+        "Rolling Median",
+        "Volatility-aware Persistence"
+    ],
+    "gamma_candidates": [
+        0.0,
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+    ],
+    "gamma_selection": "Validation MAE only",
+    "test_summary": [
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.8253667979970714,
+            "RMSE": 4.982053969219625,
+            "rank_by_MAE": 1
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "Volatility-aware Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.906667036869354,
+            "RMSE": 4.970962660161511,
+            "rank_by_MAE": 2
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "Weighted Moving Average",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.04423198068356,
+            "RMSE": 5.433507336939149,
+            "rank_by_MAE": 3
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "EMA",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.263646101744437,
+            "RMSE": 5.595617385638683,
+            "rank_by_MAE": 4
+        },
+        {
+            "horizon": "15min",
+            "target": "CPU",
+            "method": "Rolling Median",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.4266067412972,
+            "RMSE": 5.988162964015959,
+            "rank_by_MAE": 5
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "Weighted Moving Average",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.603820785424724,
+            "RMSE": 5.0391736292324865,
+            "rank_by_MAE": 1
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.6179252457869326,
+            "RMSE": 4.810687904012511,
+            "rank_by_MAE": 2
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "Volatility-aware Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.6179252457869326,
+            "RMSE": 4.810687904012511,
+            "rank_by_MAE": 2
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "EMA",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.705890759196476,
+            "RMSE": 5.101693202070039,
+            "rank_by_MAE": 4
+        },
+        {
+            "horizon": "15min",
+            "target": "Memory",
+            "method": "Rolling Median",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 3.8852569525047147,
+            "RMSE": 5.489302137400849,
+            "rank_by_MAE": 5
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 5.624025370147903,
+            "RMSE": 7.3467791198391605,
+            "rank_by_MAE": 1
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "Volatility-aware Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 5.624025370147903,
+            "RMSE": 7.3467791198391605,
+            "rank_by_MAE": 1
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "Weighted Moving Average",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 6.110990146145849,
+            "RMSE": 7.771151345128416,
+            "rank_by_MAE": 3
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "EMA",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 6.320764474425066,
+            "RMSE": 7.907192889734967,
+            "rank_by_MAE": 4
+        },
+        {
+            "horizon": "30min",
+            "target": "CPU",
+            "method": "Rolling Median",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 6.399431574181497,
+            "RMSE": 8.135528740976119,
+            "rank_by_MAE": 5
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.5690037850448,
+            "RMSE": 6.516238966759741,
+            "rank_by_MAE": 1
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "Volatility-aware Persistence",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.5690037850448,
+            "RMSE": 6.516238966759741,
+            "rank_by_MAE": 1
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "Weighted Moving Average",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 4.899269281537728,
+            "RMSE": 6.685739724417419,
+            "rank_by_MAE": 3
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "EMA",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 5.036031046204283,
+            "RMSE": 6.7390402857153,
+            "rank_by_MAE": 4
+        },
+        {
+            "horizon": "30min",
+            "target": "Memory",
+            "method": "Rolling Median",
+            "machines": 975,
+            "samples": 18525,
+            "MAE": 5.224171394029226,
+            "RMSE": 7.0456575210972945,
+            "rank_by_MAE": 5
+        }
+    ],
+    "outputs": {
+        "all_predictions": "ml\\models\\improved_baseline_all_predictions.csv",
+        "gamma_validation_scores": "ml\\models\\volatility_gamma_validation_scores.csv",
+        "selected_gamma": "ml\\models\\volatility_gamma_selected.csv",
+        "validation_summary": "ml\\models\\improved_baseline_validation_summary.csv",
+        "test_predictions": "ml\\models\\improved_baseline_test_predictions.csv",
+        "test_summary": "ml\\models\\improved_baseline_test_comparison.csv"
+    }
+}

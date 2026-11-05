@@ -1,0 +1,112 @@
+{
+    "project": "CloudMorph",
+    "experiment": "Selected-Feature Extra Trees",
+    "status": "experimental",
+    "model_version": "experimental-1.0.0",
+    "dataset": {
+        "samples": 123825,
+        "original_feature_count": 55,
+        "selected_new_feature_count": 2,
+        "total_feature_count": 57,
+        "selected_new_features": [
+            "memory_recent_max",
+            "cpu_recent_max"
+        ],
+        "removed_experimental_features": [
+            "cpu_recent_change",
+            "memory_recent_change",
+            "cpu_acceleration",
+            "memory_acceleration",
+            "cpu_rolling_std",
+            "memory_rolling_std"
+        ]
+    },
+    "model_configuration": {
+        "n_estimators": 300,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "class_weight": "balanced",
+        "random_state": 42
+    },
+    "split": {
+        "training_samples": 33150,
+        "validation_samples": 20475,
+        "test_samples": 37050,
+        "purged_samples": 33150,
+        "validation_start_history_step": 51.0,
+        "test_start_history_step": 89.0,
+        "counts": [
+            33150,
+            20475,
+            37050
+        ]
+    },
+    "threshold_selection": {
+        "method": "Maximum validation F1 subject to minimum precision",
+        "minimum_validation_precision": 0.6,
+        "selected_threshold": 0.36
+    },
+    "test_classification_metrics": {
+        "accuracy": 0.8346828609986505,
+        "balanced_accuracy": 0.49168613877236966,
+        "macro_f1": 0.5499371459673764,
+        "high_demand_precision": 0.7333333333333333,
+        "high_demand_recall": 0.20446096654275092
+    },
+    "test_independent_risk_metrics": {
+        "precision": 0.726027397260274,
+        "recall": 0.3940520446096654,
+        "specificity": 0.9989124819879829,
+        "f1": 0.5108433734939759,
+        "true_positives": 106,
+        "false_positives": 40,
+        "false_negatives": 163,
+        "true_negatives": 36741,
+        "risk_alerts": 146,
+        "actual_high_demand_cases": 269
+    },
+    "test_classification_report": {
+        "LOW_DEMAND": {
+            "precision": 0.9396145610278372,
+            "recall": 0.2757320598215408,
+            "f1-score": 0.42635056354450057,
+            "support": 7957.0
+        },
+        "NORMAL_DEMAND": {
+            "precision": 0.8278290993071593,
+            "recall": 0.9948653899528171,
+            "f1-score": 0.9036934324971637,
+            "support": 28824.0
+        },
+        "HIGH_DEMAND": {
+            "precision": 0.7333333333333333,
+            "recall": 0.20446096654275092,
+            "f1-score": 0.31976744186046513,
+            "support": 269.0
+        },
+        "accuracy": 0.8346828609986505,
+        "macro avg": {
+            "precision": 0.8335923312227767,
+            "recall": 0.49168613877236966,
+            "f1-score": 0.5499371459673764,
+            "support": 37050.0
+        },
+        "weighted avg": {
+            "precision": 0.8511504908824488,
+            "recall": 0.8346828609986505,
+            "f1-score": 0.7969378778483753,
+            "support": 37050.0
+        }
+    },
+    "important_notes": [
+        "Both selected additional features use historical observations only.",
+        "Future observations are used exclusively for workload labels.",
+        "The test period was not used for threshold selection.",
+        "Chronological boundaries were purged to prevent target overlap.",
+        "The same machines occur in all chronological periods.",
+        "The original production model was not modified.",
+        "This model is experimental and is not deployed to the API.",
+        "HIGH_RISK is a model-based warning, not a confirmed incident.",
+        "No cloud resources are modified."
+    ]
+}

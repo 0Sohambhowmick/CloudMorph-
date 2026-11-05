@@ -1,0 +1,96 @@
+{
+    "experiment": "Binary HIGH_DEMAND Platt Scaling",
+    "calibration_method": "Logistic regression on binary high-risk logit",
+    "training_performed": false,
+    "checkpoint": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\models\\lstm_sequence_classifier\\lstm_workload_classifier.pt",
+    "validation_samples": 20475,
+    "test_samples": 37050,
+    "platt_slope": 0.5503508524284828,
+    "platt_intercept": -3.445847046788236,
+    "validation_selected_threshold": {
+        "threshold": 0.01,
+        "precision": 0.72,
+        "recall": 0.8372093023255814,
+        "f1": 0.7741935483870968,
+        "alerts": 50
+    },
+    "original_threshold": 0.11,
+    "validation_calibration": {
+        "original": {
+            "binary_log_loss": 0.00884813262758623,
+            "binary_brier_score": 0.0010542480013766018,
+            "roc_auc": 0.9698045473584529,
+            "mean_high_probability": 0.0034166553635417113,
+            "median_high_probability": 5.162264410465876e-05,
+            "actual_high_prevalence": 0.0021001221001221,
+            "ece": 0.0014109434660110561
+        },
+        "platt_calibrated": {
+            "binary_log_loss": 0.004668000103603428,
+            "binary_brier_score": 0.0009127636212537293,
+            "roc_auc": 0.9698045473584529,
+            "mean_high_probability": 0.002106580166159177,
+            "median_high_probability": 0.00013931486151272688,
+            "actual_high_prevalence": 0.0021001221001221,
+            "ece": 0.00018500447672942954
+        }
+    },
+    "test_calibration": {
+        "original": {
+            "binary_log_loss": 0.055349527478437514,
+            "binary_brier_score": 0.006955903089216838,
+            "roc_auc": 0.8262687954393781,
+            "mean_high_probability": 0.006093036839446547,
+            "median_high_probability": 5.6128685924155245e-05,
+            "actual_high_prevalence": 0.007260458839406208,
+            "ece": 0.005876574857872878
+        },
+        "platt_calibrated": {
+            "binary_log_loss": 0.04069911864668309,
+            "binary_brier_score": 0.006126176570251654,
+            "roc_auc": 0.8262687954393781,
+            "mean_high_probability": 0.0037363140822172687,
+            "median_high_probability": 0.00014588074430743392,
+            "actual_high_prevalence": 0.007260458839406208,
+            "ece": 0.00534649432032215
+        }
+    },
+    "test_risk_metrics": {
+        "original_lstm_original_threshold": {
+            "threshold": 0.11,
+            "true_positives": 102,
+            "false_positives": 89,
+            "false_negatives": 167,
+            "true_negatives": 36692,
+            "alerts": 191,
+            "precision": 0.5340314136125655,
+            "recall": 0.379182156133829,
+            "f1": 0.4434782608695652,
+            "specificity": 0.997580272423262
+        },
+        "platt_original_threshold": {
+            "threshold": 0.11,
+            "true_positives": 90,
+            "false_positives": 87,
+            "false_negatives": 179,
+            "true_negatives": 36694,
+            "alerts": 177,
+            "precision": 0.5084745762711864,
+            "recall": 0.3345724907063197,
+            "f1": 0.40358744394618834,
+            "specificity": 0.9976346483238628
+        },
+        "platt_validation_selected_threshold": {
+            "threshold": 0.01,
+            "true_positives": 102,
+            "false_positives": 89,
+            "false_negatives": 167,
+            "true_negatives": 36692,
+            "alerts": 191,
+            "precision": 0.5340314136125655,
+            "recall": 0.379182156133829,
+            "f1": 0.4434782608695652,
+            "specificity": 0.997580272423262
+        }
+    }
+}

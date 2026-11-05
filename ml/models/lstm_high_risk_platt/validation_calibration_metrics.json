@@ -1,0 +1,20 @@
+{
+    "original": {
+        "binary_log_loss": 0.00884813262758623,
+        "binary_brier_score": 0.0010542480013766018,
+        "roc_auc": 0.9698045473584529,
+        "mean_high_probability": 0.0034166553635417113,
+        "median_high_probability": 5.162264410465876e-05,
+        "actual_high_prevalence": 0.0021001221001221,
+        "ece": 0.0014109434660110561
+    },
+    "platt_calibrated": {
+        "binary_log_loss": 0.004668000103603428,
+        "binary_brier_score": 0.0009127636212537293,
+        "roc_auc": 0.9698045473584529,
+        "mean_high_probability": 0.002106580166159177,
+        "median_high_probability": 0.00013931486151272688,
+        "actual_high_prevalence": 0.0021001221001221,
+        "ece": 0.00018500447672942954
+    }
+}

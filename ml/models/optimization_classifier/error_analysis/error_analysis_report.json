@@ -1,0 +1,21 @@
+{
+    "project": "CloudMorph",
+    "analysis": "Independent high-demand risk error analysis",
+    "risk_threshold": 0.3,
+    "test_samples": 37050,
+    "error_group_counts": {
+        "DETECTED_HIGH": 135,
+        "MISSED_HIGH": 134,
+        "FALSE_ALERT": 48,
+        "CORRECTLY_IGNORED": 36733
+    },
+    "important_notes": [
+        "This is a diagnostic experiment only.",
+        "The production model was not modified.",
+        "The risk threshold was not changed.",
+        "The same chronological split and training configuration were used.",
+        "Feature differences are descriptive, not proof of causation.",
+        "Machine-level error counts do not establish machine-specific failure.",
+        "No cloud resources were modified."
+    ]
+}

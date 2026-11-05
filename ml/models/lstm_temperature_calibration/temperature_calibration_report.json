@@ -1,0 +1,97 @@
+{
+    "experiment": "Original LSTM Temperature Scaling",
+    "temperature": 1.8933345079421997,
+    "calibration_method": "Validation-only temperature scaling",
+    "checkpoint_used": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\models\\lstm_sequence_classifier\\lstm_workload_classifier.pt",
+    "scaler_used": "C:\\Users\\Soham\\OneDrive\\Desktop\\CloudMorph\\ml\\models\\lstm_sequence_classifier\\feature_scaler.npz",
+    "training_performed": false,
+    "validation_samples": 20475,
+    "test_samples": 37050,
+    "original_threshold": 0.11,
+    "calibrated_validation_threshold": {
+        "threshold": 0.24000000000000002,
+        "precision": 0.72,
+        "recall": 0.8372093023255814,
+        "f1": 0.7741935483870968,
+        "alerts": 50
+    },
+    "validation_calibration": {
+        "original": {
+            "negative_log_likelihood": 0.3063889741897583,
+            "multiclass_brier_score": 0.14585628890982377,
+            "multiclass_ece": 0.04838654641557819,
+            "high_demand_brier_score": 0.0010542480165372983,
+            "high_demand_ece": 0.0014109432021262845
+        },
+        "calibrated": {
+            "negative_log_likelihood": 0.24256344139575958,
+            "multiclass_brier_score": 0.14034850685374284,
+            "multiclass_ece": 0.029124105468628897,
+            "high_demand_brier_score": 0.001380586505706669,
+            "high_demand_ece": 0.012435076299768229
+        }
+    },
+    "test_calibration": {
+        "original": {
+            "negative_log_likelihood": 0.24277444183826447,
+            "multiclass_brier_score": 0.12669527677718537,
+            "multiclass_ece": 0.037912386467582285,
+            "high_demand_brier_score": 0.006955903066388646,
+            "high_demand_ece": 0.005876574427446831
+        },
+        "calibrated": {
+            "negative_log_likelihood": 0.2197393923997879,
+            "multiclass_brier_score": 0.12598828818095703,
+            "multiclass_ece": 0.03345771975523713,
+            "high_demand_brier_score": 0.007067280241596808,
+            "high_demand_ece": 0.010734493638038155
+        }
+    },
+    "test_risk_metrics": {
+        "original_model_original_threshold": {
+            "classification_accuracy": 0.920161943319838,
+            "classification_balanced_accuracy": 0.6902020223734154,
+            "classification_macro_f1": 0.7277601892932921,
+            "risk_threshold": 0.11,
+            "risk_precision": 0.5340314136125655,
+            "risk_recall": 0.379182156133829,
+            "risk_f1": 0.4434782608695652,
+            "risk_specificity": 0.997580272423262,
+            "risk_true_positives": 102,
+            "risk_false_positives": 89,
+            "risk_false_negatives": 167,
+            "risk_true_negatives": 36692,
+            "risk_alert_count": 191
+        },
+        "calibrated_model_calibrated_threshold": {
+            "classification_accuracy": 0.920161943319838,
+            "classification_balanced_accuracy": 0.6902020223734154,
+            "classification_macro_f1": 0.7277601892932921,
+            "risk_threshold": 0.24000000000000002,
+            "risk_precision": 0.5340314136125655,
+            "risk_recall": 0.379182156133829,
+            "risk_f1": 0.4434782608695652,
+            "risk_specificity": 0.997580272423262,
+            "risk_true_positives": 102,
+            "risk_false_positives": 89,
+            "risk_false_negatives": 167,
+            "risk_true_negatives": 36692,
+            "risk_alert_count": 191
+        },
+        "calibrated_model_original_threshold": {
+            "classification_accuracy": 0.920161943319838,
+            "classification_balanced_accuracy": 0.6902020223734154,
+            "classification_macro_f1": 0.7277601892932921,
+            "risk_threshold": 0.11,
+            "risk_precision": 0.53125,
+            "risk_recall": 0.379182156133829,
+            "risk_f1": 0.44251626898047725,
+            "risk_specificity": 0.9975530844729615,
+            "risk_true_positives": 102,
+            "risk_false_positives": 90,
+            "risk_false_negatives": 167,
+            "risk_true_negatives": 36691,
+            "risk_alert_count": 192
+        }
+    }
+}

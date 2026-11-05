@@ -1,0 +1,15 @@
+{
+    "false_positive_windows": 89,
+    "unique_machines": 13,
+    "average_high_probability": 0.9855661283146068,
+    "median_high_probability": 0.9997098,
+    "probability_above_95_percent": 86,
+    "average_historical_memory": 81.60588018903232,
+    "average_historical_cpu": 44.79250930962751,
+    "average_future_memory_peak": 63.89460655383685,
+    "average_future_cpu_peak": 34.015955097753256,
+    "average_memory_recent_change": -13.146760413352174,
+    "average_cpu_recent_change": -10.356835148127885,
+    "alert_sequences": 17,
+    "longest_consecutive_alert_sequence": 9
+}

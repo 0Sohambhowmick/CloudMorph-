@@ -1,0 +1,14 @@
+{
+    "matched_test_samples": 37050,
+    "actual_high_demand_cases": 269,
+    "lstm_threshold": 0.11,
+    "extra_trees_threshold": 0.3,
+    "lstm_alerts": 191,
+    "extra_trees_alerts": 183,
+    "same_workload_predictions": 30631,
+    "different_workload_predictions": 6419,
+    "both_alert": 142,
+    "lstm_only_alert": 49,
+    "extra_trees_only_alert": 41,
+    "neither_alert": 36818
+}

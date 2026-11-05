@@ -1,0 +1,88 @@
+{
+    "dataset": {
+        "records": 140400,
+        "machines": 975,
+        "observations_per_machine": 144,
+        "interval_seconds": 300
+    },
+    "split": {
+        "train_end_index_exclusive": 100,
+        "validation_end_index_exclusive": 122,
+        "test_start_index": 122
+    },
+    "method": "Persistence baseline: predict future utilization using the latest observation available at forecast origin.",
+    "benchmarks": {
+        "5_minutes": {
+            "horizon_steps": 1,
+            "horizon_minutes": 5,
+            "results": {
+                "util_CPU": {
+                    "MAE": 2.3439960915426834,
+                    "RMSE": 3.0789055067373914,
+                    "machines": 975,
+                    "total_predictions": 20475
+                },
+                "util_memory": {
+                    "MAE": 2.019612944741513,
+                    "RMSE": 2.844514513224965,
+                    "machines": 975,
+                    "total_predictions": 20475
+                }
+            }
+        },
+        "15_minutes": {
+            "horizon_steps": 3,
+            "horizon_minutes": 15,
+            "results": {
+                "util_CPU": {
+                    "MAE": 3.4184340056649067,
+                    "RMSE": 4.63259381437951,
+                    "machines": 975,
+                    "total_predictions": 18525
+                },
+                "util_memory": {
+                    "MAE": 3.1603071614676215,
+                    "RMSE": 4.44235850233172,
+                    "machines": 975,
+                    "total_predictions": 18525
+                }
+            }
+        },
+        "30_minutes": {
+            "horizon_steps": 6,
+            "horizon_minutes": 30,
+            "results": {
+                "util_CPU": {
+                    "MAE": 6.0519160238388565,
+                    "RMSE": 7.819729209741781,
+                    "machines": 975,
+                    "total_predictions": 15600
+                },
+                "util_memory": {
+                    "MAE": 4.894464108571386,
+                    "RMSE": 6.915901375706922,
+                    "machines": 975,
+                    "total_predictions": 15600
+                }
+            }
+        },
+        "60_minutes": {
+            "horizon_steps": 12,
+            "horizon_minutes": 60,
+            "results": {
+                "util_CPU": {
+                    "MAE": 13.320010761342566,
+                    "RMSE": 14.395319430727358,
+                    "machines": 975,
+                    "total_predictions": 9750
+                },
+                "util_memory": {
+                    "MAE": 10.525606666800337,
+                    "RMSE": 11.865344865763777,
+                    "machines": 975,
+                    "total_predictions": 9750
+                }
+            }
+        }
+    }
+}
